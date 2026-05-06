@@ -440,8 +440,8 @@ items:[
 ];
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
-let state = {
-tab: “overview”,syncStatus: “idle”, // idle | syncing | synced | error
+let state = {tab: “overview”,
+syncStatus: “idle”, // idle | syncing | synced | error
 lastSaved: null,
 // shared (synced)
 checkedTasks: {},
@@ -666,8 +666,8 @@ const k=`${ci}-${ti}`;
 const checked = !!state.checkedSweden[k];
 return `<label class="task-row" style="display:flex">
 <input type=“checkbox” ${checked?“checked”:””} data-sweden=”${k}” style=“margin-top:2px”/>
-<div style="flex:1">
-<div style=“font-size:13px;color:${checked?”#bbb”:”#3d2e1e”};text-decoration:${checked?“line-through”:“none”};line-height:1.5;margin-bottom:2px”>${t.task}</div>```
+<div style="flex:1">```
+      <div style="font-size:13px;color:${checked?"#bbb":"#3d2e1e"};text-decoration:${checked?"line-through":"none"};line-height:1.5;margin-bottom:2px">${t.task}</div>
       <div style="font-size:11px;color:${checked?"#ccc":"#8a7060"};font-style:italic">💡 ${t.tip}</div>
     </div>
   </label>`;
@@ -797,10 +797,10 @@ const tableRows = state.extraItems.length===0
 <div style=“text-align:right;font-size:13px;font-weight:700;color:${row.budget===0?”#bbb”:”#b5855a”}”>${fmtBudget(row.budget)}</div>
 <div style="display:flex;justify-content:flex-end">
 <div class="actual-wrap">
-<span class="actual-prefix">$</span>
-<input class="actual-inp" type="text" inputmode="decimal" placeholder="0" value="${actual}" data-extra-actual="${i}" style="width:72px"/>
-</div>
-</div>```
+<span class="actual-prefix">$</span>```
+            <input class="actual-inp" type="text" inputmode="decimal" placeholder="0" value="${actual}" data-extra-actual="${i}" style="width:72px"/>
+          </div>
+        </div>
         <button data-remove-extra="${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:16px;padding:0;line-height:1">×</button>
       </div>`;
     }).join("")}
@@ -1120,63 +1120,57 @@ state.newExtra={item:””,budget:””,status:“ok”};
 scheduleSave(); render();
 }
 
-function updateStats() {
-// Light update of just the header stats without full re-render
+function updateStats() {// Light update of just the header stats without full re-render
 const taskDone = Object.values(state.checkedTasks).filter(Boolean).length;
 const taskTotal = TIMELINE.reduce((s,p)=>s+p.tasks.length,0);
 // We’ll just re-render the whole thing — it’s fast enough
-}function updateSummary() {
+}
+
+function updateSummary() {
 // For actual cost inputs, just trigger a light re-render of the summary area
 // Full render is fine for now
 }
 
 // ─── BOOT ─────────────────────────────────────────────────────────────────────
-function bootWithLocalStorage() {
+// Load from localStorage instantly — no cloud sync needed
 try {
 const saved = localStorage.getItem(SYNC_KEY);
-if(saved) {
+if (saved) {
 const d = JSON.parse(saved);
-state.checkedTasks   = d.checkedTasks  || {};
-state.checkedSweden  = d.checkedSweden || {};
-state.checkedShop    = d.checkedShop   || {};
-state.shopCustom     = d.shopCustom    || { fri_food:[], fri_drinks:[], breakfast:[], wed_drinks:[], fire:[] };
-state.actualCosts    = d.actualCosts   || {};
-state.extraItems     = d.extraItems    || [];
-state.extraActual    = d.extraActual   || {};
-state.customSchedule = d.customSchedule|| null;
+state.checkedTasks   = d.checkedTasks   || {};
+state.checkedSweden  = d.checkedSweden  || {};
+state.checkedShop    = d.checkedShop    || {};
+state.shopCustom     = d.shopCustom     || { fri_food:[], fri_drinks:[], breakfast:[], wed_drinks:[], fire:[] };
+state.actualCosts    = d.actualCosts    || {};
+state.extraItems     = d.extraItems     || [];
+state.extraActual    = d.extraActual    || {};
+state.customSchedule = d.customSchedule || null;
+state.lastSaved      = d.savedAt        || null;
 }
-} catch(e){}
+} catch(e) {}
 state.syncStatus = “synced”;
 render();
 
+// Save to localStorage on every change
 saveToCloud = async function() {
 try {
-const payload = { checkedTasks:state.checkedTasks, checkedSweden:state.checkedSweden, checkedShop:state.checkedShop, shopCustom:state.shopCustom, actualCosts:state.actualCosts, extraItems:state.extraItems, extraActual:state.extraActual, customSchedule:state.customSchedule||null, savedAt:new Date().toISOString() };
+const payload = {
+checkedTasks:   state.checkedTasks,
+checkedSweden:  state.checkedSweden,
+checkedShop:    state.checkedShop,
+shopCustom:     state.shopCustom,
+actualCosts:    state.actualCosts,
+extraItems:     state.extraItems,
+extraActual:    state.extraActual,
+customSchedule: state.customSchedule || null,
+savedAt:        new Date().toISOString(),
+};
 localStorage.setItem(SYNC_KEY, JSON.stringify(payload));
 state.syncStatus = “synced”;
-state.lastSaved = payload.savedAt;
-} catch(e) { state.syncStatus=“error”; }
+state.lastSaved  = payload.savedAt;
+} catch(e) { state.syncStatus = “error”; }
 renderSyncBadge();
 };
-}
-
-// Try cloud storage with a 2-second timeout fallback
-let booted = false;
-const bootTimeout = setTimeout(() => {
-if (!booted) { booted = true; bootWithLocalStorage(); }
-}, 2000);
-
-if (typeof window.storage !== “undefined”) {
-loadFromCloud().then(() => {
-if (!booted) { booted = true; clearTimeout(bootTimeout); }
-}).catch(() => {
-if (!booted) { booted = true; clearTimeout(bootTimeout); bootWithLocalStorage(); }
-});
-} else {
-clearTimeout(bootTimeout);
-booted = true;
-bootWithLocalStorage();
-}
 
 // ─── DOWNLOAD BUTTON ──────────────────────────────────────────────────────────
 (function() {
