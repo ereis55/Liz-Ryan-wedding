@@ -2071,44 +2071,7 @@ saveToCloud = async function() {
   renderSyncBadge();
 };
 
-// ─── DOWNLOAD BUTTON ──────────────────────────────────────────────────────────
-(function() {
-  const btn = document.createElement("button");
-  btn.innerHTML = "⬇️ Download for Netlify";
-  btn.style.cssText = `
-    position:fixed;bottom:24px;right:20px;z-index:9999;
-    background:#6a1010;color:#f5f0e8;border:none;border-radius:30px;
-    padding:12px 20px;font-family:'Lato',sans-serif;font-size:13px;font-weight:700;
-    cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25);letter-spacing:.03em;
-    transition:background .18s,transform .12s;white-space:nowrap;
-  `;
-  btn.onmouseenter = ()=>btn.style.background="#9b2335";
-  btn.onmouseleave = ()=>btn.style.background="#6a1010";
-  btn.ontouchstart = ()=>btn.style.background="#9b2335";
-  btn.onclick = function() {
-    btn.innerHTML = "⏳ Preparing...";
-    setTimeout(()=>{
-      try {
-        const html = document.documentElement.outerHTML;
-        const blob = new Blob([html], {type:"text/html"});
-        const url  = URL.createObjectURL(blob);
-        const a    = document.createElement("a");
-        a.href     = url;
-        a.download = "liz-ryan-wedding.html";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        btn.innerHTML = "✓ Downloaded!";
-        setTimeout(()=>{ btn.innerHTML="⬇️ Download for Netlify"; },2500);
-      } catch(e) {
-        btn.innerHTML = "⬇️ Download for Netlify";
-        alert("To save: right-click this page → Save As → liz-ryan-wedding.html");
-      }
-    }, 100);
-  };
-  document.body.appendChild(btn);
-})();
+// ─── BOOT complete ───────────────────────────────────────────────────────────
 </script>
 </body>
 </html>
