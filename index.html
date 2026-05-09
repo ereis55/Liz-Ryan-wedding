@@ -308,79 +308,46 @@ const DAY_SCHEDULE = [
 ];
 
 const SHOPPING_LISTS = [
-  { key:"fri_food", title:"🛒 Friday Night BBQ — Food", store:"ICA Maxi", storeColor:"#e05a2a", budget:"$1,500–$2,000",
+  { key:"fri_drinks", title:"🍷 Friday Night Drinks — 70 guests, 3 hrs", store:"Systembolaget", storeColor:"#006b3c", budget:"$1,200–$1,800",
     items:[
-      {name:"Hotdogs",qty:"200 pcs",price:"$78–$116"},
-      {name:"Burger patties",qty:"150 pcs",price:"$243–$340"},
-      {name:"Hotdog buns",qty:"200 pcs",price:"$58–$78"},
-      {name:"Burger buns",qty:"150 pcs",price:"$58–$87"},
-      {name:"Bell peppers",qty:"Bulk",price:""},
-      {name:"Zucchini",qty:"Bulk",price:""},
-      {name:"Corn on the cob",qty:"Bulk",price:""},
-      {name:"Mushrooms",qty:"Bulk",price:""},
-      {name:"Coleslaw (ready-made)",qty:"Bulk",price:""},
-      {name:"Pasta salad (ready-made)",qty:"Bulk",price:""},
-      {name:"Green salad mix",qty:"Bulk",price:""},
-      {name:"Ketchup",qty:"3–4 large bottles",price:""},
-      {name:"Mustard",qty:"3–4 large bottles",price:""},
-      {name:"Mayonnaise",qty:"3–4 large bottles",price:""},
-      {name:"Relish",qty:"2 jars",price:""},
-      {name:"Extra bread rolls",qty:"Bulk",price:""},
-      {name:"Chips + dips",qty:"Bulk",price:""},
-      {name:"Paper plates",qty:"200+",price:""},
-      {name:"Napkins",qty:"Bulk pack",price:""},
-      {name:"Plastic utensils (fork+knife)",qty:"200 sets",price:""},
-      {name:"Plastic cups",qty:"300+",price:""},
-      {name:"Aluminum foil (for grilling)",qty:"2 rolls",price:""},
-      {name:"Trash bags (large)",qty:"10+",price:""},
-      {name:"Hand sanitizer",qty:"2–3 bottles",price:""},
-      {name:"Graham crackers (s'mores)",qty:"10 packs",price:""},
-      {name:"Marshmallows",qty:"5 large bags",price:""},
-      {name:"Chocolate bars (s'mores)",qty:"10 bars",price:""},
-      {name:"Roasting sticks / skewers",qty:"50 pcs",price:""},
-    ]
-  },
-  { key:"fri_drinks", title:"🍷 Friday Night BBQ — Drinks", store:"Systembolaget", storeColor:"#006b3c", budget:"$2,000",
-    items:[
-      {name:"Beer (lager/IPA mix)",qty:"200 cans/bottles",price:"$194–$291"},
-      {name:"Red wine",qty:"10–12 bottles",price:""},
-      {name:"White wine",qty:"10–12 bottles",price:""},
-      {name:"Aperol",qty:"6–8 bottles",price:"$116–$155"},
-      {name:"Prosecco (for spritzes)",qty:"15–20 bottles",price:"$194–$291"},
-      {name:"Soda water (for spritzes)",qty:"20 large bottles",price:"$29–$49"},
-      {name:"Soft drinks (cola, lemon, orange)",qty:"Bulk 24-pack",price:""},
+      {name:"Beer (lager/IPA mix)",qty:"140–160 cans/bottles",price:"$136–$194"},
+      {name:"Red wine",qty:"8–10 bottles",price:""},
+      {name:"White wine",qty:"8–10 bottles",price:""},
+      {name:"Aperol",qty:"4–5 bottles",price:"$78–$97"},
+      {name:"Prosecco for Aperol Spritzes",qty:"10–12 bottles",price:"$130–$194"},
+      {name:"Soda water for spritzes",qty:"12 large bottles",price:"$15–$25"},
+      {name:"Cola",qty:"Bulk 24-pack",price:""},
+      {name:"Lemon soda",qty:"Bulk",price:""},
       {name:"Sparkling water",qty:"Bulk",price:""},
       {name:"Still water",qty:"Bulk",price:""},
-      {name:"Ice",qty:"10–15 kg bags",price:""},
-      {name:"Lemon + lime (garnish)",qty:"5–6 each",price:""},
-      {name:"Paper straws",qty:"200",price:""},
-      {name:"Plastic wine glasses",qty:"200",price:""},
-      {name:"Cooler bags / ice buckets",qty:"4–6",price:""},
+      {name:"Ice",qty:"8–10 kg bags",price:""},
+      {name:"Lemon + lime garnish",qty:"4–5 each",price:""},
+      {name:"Paper straws",qty:"150",price:""},
+      {name:"Plastic cups / wine glasses",qty:"150",price:""},
+      {name:"Cooler bags / ice buckets",qty:"3–4",price:""},
     ]
   },
-  { key:"breakfast", title:"☀️ Sat + Sun Breakfast — 16 People", store:"ICA", storeColor:"#e05a2a", budget:"$500",
+  { key:"breakfast", title:"☀️ Saturday Morning Breakfast — 12 People", store:"ICA", storeColor:"#e05a2a", budget:"$300–$400",
     items:[
-      {name:"Sliced bread (white + wholegrain)",qty:"2–3 loaves",price:"$8–$12"},
+      {name:"Sliced bread (white + wholegrain)",qty:"2 loaves",price:"$8–$12"},
       {name:"Knäckebröd (crispbread)",qty:"2 packs",price:"$6–$9"},
-      {name:"Croissants or kanelbullar",qty:"20–24 pcs",price:"$15–$25"},
-      {name:"Eggs",qty:"24 eggs",price:"$8–$12"},
-      {name:"Butter",qty:"2–3 packs",price:"$6–$10"},
-      {name:"Cheese slices (assorted)",qty:"2–3 bulk packs",price:"$12–$18"},
-      {name:"Ham / deli slices",qty:"2 bulk packs",price:"$12–$18"},
-      {name:"Salami",qty:"1 pack",price:"$5–$8"},
-      {name:"Yogurt (plain + flavored)",qty:"4–5 large tubs",price:"$10–$16"},
-      {name:"Granola",qty:"2 bags",price:"$7–$12"},
-      {name:"Bananas",qty:"2 bunches",price:"$4–$6"},
-      {name:"Apples",qty:"1 bag",price:"$4–$6"},
-      {name:"Grapes",qty:"1 large bunch",price:"$5–$8"},
+      {name:"Croissants or kanelbullar",qty:"14–16 pcs",price:"$12–$20"},
+      {name:"Eggs",qty:"18 eggs",price:"$6–$9"},
+      {name:"Butter",qty:"2 packs",price:"$5–$8"},
+      {name:"Cheese slices (assorted)",qty:"2 bulk packs",price:"$10–$15"},
+      {name:"Ham / deli slices",qty:"1–2 bulk packs",price:"$10–$15"},
+      {name:"Yogurt (plain + flavored)",qty:"3–4 large tubs",price:"$8–$12"},
+      {name:"Granola",qty:"1–2 bags",price:"$5–$9"},
+      {name:"Bananas",qty:"1–2 bunches",price:"$3–$5"},
+      {name:"Apples",qty:"1 bag",price:"$3–$5"},
       {name:"Jam (strawberry + lingonberry)",qty:"2 jars",price:"$5–$8"},
-      {name:"Orange juice",qty:"3–4 large cartons",price:"$8–$12"},
+      {name:"Orange juice",qty:"2–3 large cartons",price:"$6–$10"},
       {name:"Coffee (ground or pads)",qty:"2 packs",price:"$8–$12"},
-      {name:"Assorted tea bags",qty:"1–2 boxes",price:"$4–$6"},
-      {name:"Milk + oat milk",qty:"3–4 liters",price:"$6–$9"},
+      {name:"Assorted tea bags",qty:"1 box",price:"$3–$5"},
+      {name:"Milk + oat milk",qty:"2–3 liters",price:"$5–$8"},
       {name:"Sugar",qty:"1 bag",price:"$2–$3"},
-      {name:"Paper plates (small)",qty:"50",price:"$3–$5"},
-      {name:"Coffee cups (disposable)",qty:"50",price:"$3–$5"},
+      {name:"Paper plates (small)",qty:"30–40",price:"$2–$4"},
+      {name:"Coffee cups (disposable)",qty:"30–40",price:"$2–$4"},
       {name:"Napkins",qty:"1 pack",price:"$2–$3"},
     ]
   },
@@ -415,7 +382,7 @@ const SHOPPING_LISTS = [
       {name:"Beer openers / corkscrews",qty:"4–6",price:""},
     ]
   },
-  { key:"fire", title:"🔥 Firewood, Fire & S'mores", store:"Byggmax / local wood supplier", storeColor:"#8a4a1a", budget:"$1,000",
+  { key:"fire", title:"🔥 Firewood, Fire & S'mores", store:"Byggmax / local wood supplier", storeColor:"#8a4a1a", budget:"$300–$500",
     items:[
       {name:"Firewood (birch or oak hardwood)",qty:"3–4 large bundles (~80–100 kg)",price:"$80–$150"},
       {name:"Kindling / fire starter sticks",qty:"2 packs",price:"$8–$15"},
@@ -442,7 +409,7 @@ let state = {
   checkedTasks: {},
   checkedSweden: {},
   checkedShop: {},
-  shopCustom: { fri_food:[], fri_drinks:[], breakfast:[], wed_drinks:[], fire:[] },
+  shopCustom: { fri_drinks:[], breakfast:[], wed_drinks:[], fire:[] },
   actualCosts: {},
   extraItems: [],
   extraActual: {},
@@ -456,6 +423,8 @@ let state = {
   customNBFood: null,
   customNBDrinks: null,
   customPacking: null,
+  customVendors: null,
+  customNBTodo: null,
   // edit modes
   budgetEditMode: false,
   timelineEditMode: false,
@@ -463,6 +432,7 @@ let state = {
   shoppingEditMode: false,
   nbEditMode: false,
   packingEditMode: false,
+  vendorsEditMode: false,
   // inline editing state (not persisted)
   newShopItem: { fri_food:"", fri_drinks:"", breakfast:"", wed_drinks:"", fire:"" },
   newExtra: { item:"", budget:"", status:"ok" },
@@ -592,13 +562,14 @@ function buildApp() {
     {id:"dayof",       label:"⛪ Wedding Day"},
     {id:"shopping",    label:"🛒 Shopping"},
     {id:"packing",     label:"🧳 Pack from USA"},
+    {id:"vendors",     label:"📋 Vendors"},
     {id:"extras",      label:"➕ Add Items"},
     {id:"checklist",   label:"✅ To-Do"},
   ];
 
-  const totalActual = BUDGET_LINES.reduce((s,r)=>s+(parseFloat(state.actualCosts[r.item])||0),0)
+  const totalActual = (state.customBudget||BUDGET_LINES).reduce((s,r)=>s+(parseFloat(state.actualCosts[r.item])||0),0)
                     + state.extraItems.reduce((s,r,i)=>s+(parseFloat(state.extraActual[i])||0),0);
-  const totalBudget = YOUR_TOTAL + state.extraItems.reduce((s,r)=>s+r.budget,0);
+  const totalBudget = (state.customBudget||BUDGET_LINES).reduce((s,r)=>s+r.budget,0) + state.extraItems.reduce((s,r)=>s+r.budget,0);
   const taskTotal   = TIMELINE.reduce((s,p)=>s+p.tasks.length,0);
   const taskDone    = Object.values(state.checkedTasks).filter(Boolean).length;
 
@@ -634,6 +605,7 @@ function buildTab() {
     case "dayof":       return buildDayOfTab();
     case "shopping":    return buildShoppingTab();
     case "packing":     return buildPackingTab();
+    case "vendors":     return buildVendorsTab();
     case "extras":      return buildExtrasTab();
     case "checklist":   return buildChecklistTab();
     default: return "";
@@ -809,105 +781,199 @@ function buildSwedenTab() {
 
 
 // ── NIGHT BEFORE TAB ──────────────────────────────────────────────────────────
-const DEFAULT_NB_COSTS = [
-  {l:"Food Budget",         v:"$2,000", r:"Est. $1,500–$2,500", w:true},
-  {l:"Drinks Budget",       v:"$2,000", r:"Est. $883–$1,291",   w:false},
-  {l:"Grilling Staff (2)",  v:"$1,000", r:"Est. $600–$1,200",   w:false},
-  {l:"Wood / Fire / S'mores",v:"$1,000",r:"Est. $200–$500",     w:false},
-  {l:"Bus (50 guests)",     v:"$800",   r:"Est. $800–$1,500",   w:false},
-  {l:"Simple Decor",        v:"$200",   r:"Est. $100–$300",     w:false},
-];
-const DEFAULT_NB_FOOD = [
-  ["Hotdogs (200 pcs)","$78–$116"],["Burger patties (150 pcs)","$243–$340"],
-  ["Hotdog + burger buns","$116–$165"],["Grilled vegetables (bulk)","$78–$116"],
-  ["Condiments (ketchup, mustard, mayo)","$39–$58"],["Salads (coleslaw, pasta, green)","$78–$116"],
-  ["Chips, rolls, extras","$39–$58"],["Paper plates, utensils, cups","$49–$78"],
-  ["Graham crackers + marshmallows + chocolate","~$40"],["Roasting sticks","~$15"],
-];
-const DEFAULT_NB_DRINKS = [
-  ["Beer (200 cans/bottles)","$194–$291"],["Red + white wine (20–25 bottles)","$243–$340"],
-  ["Aperol (6–8 bottles)","$116–$155"],["Prosecco for spritzes (15–20 bottles)","$194–$291"],
-  ["Soda water, soft drinks, water","$107–$165"],["Ice, cups, straws, lemon/lime","$29–$49"],
+const DEFAULT_NB_TODO = [
+  { category: "📞 Day Before — Vendor Calls", color: "#9b2335", tasks: [
+    { task: "Call florist — confirm delivery time and location", done: false },
+    { task: "Call caterer — confirm guest headcount and arrival time", done: false },
+    { task: "Call photographer — confirm morning arrival time", done: false },
+    { task: "Call DJ — confirm setup time and location at Gråbogården", done: false },
+    { task: "Call bus charter — confirm pickup time and church address", done: false },
+    { task: "Call wedding planner — final walkthrough of the day", done: false },
+    { task: "Call hair & beauty — confirm arrival time and number of people", done: false },
+    { task: "Text grilling staff — confirm arrival time for the evening", done: false },
+    { task: "Call tent/equipment rental — confirm setup is complete", done: false },
+    { task: "Call priest — confirm ceremony time and any last details", done: false },
+  ]},
+  { category: "🎉 Day Before — Evening Setup", color: "#8a3030", tasks: [
+    { task: "Confirm outdoor space is ready — tables, chairs, lighting", done: false },
+    { task: "Set up bonfire / fire pit area", done: false },
+    { task: "Set up s'mores station", done: false },
+    { task: "Put out picnic blankets", done: false },
+    { task: "Set up welcome drinks station", done: false },
+    { task: "Place decorations and signage", done: false },
+    { task: "Put rice packets in a basket near the exit for tomorrow", done: false },
+    { task: "Greet guests as they arrive", done: false },
+    { task: "Make sure music is playing", done: false },
+    { task: "Give a toast with the group — enjoy tonight!", done: false },
+  ]},
+  { category: "🌙 Night Before — Before Bed", color: "#4a6a9a", tasks: [
+    { task: "Charge all devices overnight (phone, camera, power bank)", done: false },
+    { task: "Lay out wedding dress, shoes, veil, and all accessories", done: false },
+    { task: "Put gratuity envelopes in a safe place — give to wedding planner in the morning", done: false },
+    { task: "Pack bridal bag: vows, lipstick, safety pins, stain pen, mints, pain killers", done: false },
+    { task: "Confirm who is bringing the rings to the ceremony", done: false },
+    { task: "Set an alarm — hair & makeup starts early!", done: false },
+    { task: "Drink water, eat something, get some sleep 💛", done: false },
+  ]},
+  { category: "☀️ Wedding Morning — Getting Ready", color: "#8a2040", tasks: [
+    { task: "Set out self-serve breakfast for 12 people", done: false },
+    { task: "Put on coffee + tea", done: false },
+    { task: "Make sure bridal suite is ready — good light, mirrors, space for 6+", done: false },
+    { task: "Photographer arrives — getting-ready shots begin", done: false },
+    { task: "Hair & makeup begins — Liz + bridesmaids", done: false },
+    { task: "Ryan + groomsmen get ready", done: false },
+    { task: "Do a first look (optional)", done: false },
+    { task: "Bridal party portraits before buses depart", done: false },
+    { task: "Make sure everyone has eaten something before ceremony", done: false },
+    { task: "Confirm buses are ready and waiting", done: false },
+  ]},
+  { category: "⛪ Ceremony Day — Key Moments", color: "#9b2335", tasks: [
+    { task: "Board buses to church — 100 guests", done: false },
+    { task: "Ceremony begins at 3:00 PM", done: false },
+    { task: "Rice throw exit!", done: false },
+    { task: "Buses to Gråbogården (~30 min)", done: false },
+    { task: "Cocktail hour — welcome drinks", done: false },
+    { task: "Golden hour portraits with photographer", done: false },
+    { task: "Open bar opens", done: false },
+    { task: "Buffet dinner served", done: false },
+    { task: "Speeches + first dance", done: false },
+    { task: "DJ set begins", done: false },
+    { task: "Liz changes into reception dress", done: false },
+    { task: "Give gratuity envelopes to DJ, photographer, servers", done: false },
+  ]},
 ];
 
 function buildNightBeforeTab() {
-  if (!state.customNBCosts)  state.customNBCosts  = DEFAULT_NB_COSTS.map(r=>({...r}));
-  if (!state.customNBFood)   state.customNBFood   = DEFAULT_NB_FOOD.map(r=>[...r]);
-  if (!state.customNBDrinks) state.customNBDrinks = DEFAULT_NB_DRINKS.map(r=>[...r]);
+  if (!state.customNBTodo) {
+    state.customNBTodo = DEFAULT_NB_TODO.map(cat=>({...cat, tasks: cat.tasks.map(t=>({...t}))}));
+  }
   const em = state.nbEditMode;
+  const allTasks = state.customNBTodo.reduce((s,c)=>s+c.tasks.length,0);
+  const doneTasks = state.customNBTodo.reduce((s,c)=>s+c.tasks.filter(t=>t.done).length,0);
+  const pct = allTasks>0?Math.round((doneTasks/allTasks)*100):0;
 
-  const costCards = state.customNBCosts.map((c,i)=>{
-    if (em) return `<div style="background:white;border:1px solid #e0d0c0;border-radius:8px;padding:10px;border-left:4px solid #9b2335;display:flex;flex-direction:column;gap:5px">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <input value="${c.l.replace(/"/g,"&quot;")}" data-nbc-label="${i}" placeholder="Label" style="border:1px solid #e0d0c0;border-radius:4px;padding:3px 6px;font-size:11px;outline:none;background:#faf5f0;width:70%"/>
-        <button data-nbc-del="${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:15px;padding:0">×</button>
-      </div>
-      <input value="${c.v.replace(/"/g,"&quot;")}" data-nbc-val="${i}" placeholder="e.g. $2,000" style="border:1px solid #e0d0c0;border-radius:4px;padding:3px 6px;font-size:14px;font-weight:700;color:#9b2335;outline:none;background:#faf5f0;width:100%"/>
-      <input value="${c.r.replace(/"/g,"&quot;")}" data-nbc-range="${i}" placeholder="e.g. Est. $1,500–$2,500" style="border:1px solid #e0d0c0;border-radius:4px;padding:3px 6px;font-size:11px;color:#8a5a4a;outline:none;background:#faf5f0;width:100%"/>
-    </div>`;
-    return `<div style="background:white;border:1px solid ${c.w?"#f0c080":"#e0d0c0"};border-radius:8px;padding:13px;border-left:4px solid ${c.w?"#c17f3e":"#9b2335"}">
-      <div style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#7a3a2a;margin-bottom:3px">${c.l}</div>
-      <div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#9b2335;margin-bottom:2px">${c.v}</div>
-      <div style="font-size:11px;color:#8a5a4a">${c.r}</div>
-    </div>`;
-  }).join("");
-
-  const addCostRow = em ? `<div style="grid-column:1/-1;display:flex;gap:6px;align-items:center;padding:4px 0">
-    <input id="nbc-new-label" placeholder="Label (e.g. Photographer)" style="flex:2;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
-    <input id="nbc-new-val" placeholder="$0" style="width:70px;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
-    <button id="nbc-add" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">Add</button>
-  </div>` : "";
-
-  const buildEditableList = (items, prefix) => {
-    const rows = items.map(([name,price],i)=>{
-      if (em) return `<div style="display:flex;gap:6px;padding:6px 12px;border-bottom:1px solid #f5f0e8;align-items:center">
-        <input value="${name.replace(/"/g,"&quot;")}" data-nb-name="${prefix}-${i}" style="flex:2;border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:12px;outline:none;background:#faf5f0"/>
-        <input value="${price.replace(/"/g,"&quot;")}" data-nb-price="${prefix}-${i}" style="width:90px;border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:11px;text-align:right;outline:none;background:#faf5f0;color:#9b2335;font-weight:700"/>
-        <button data-nb-del="${prefix}-${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:15px;padding:0;flex-shrink:0">×</button>
-      </div>`;
-      return `<div style="display:flex;justify-content:space-between;padding:7px 16px;border-bottom:1px solid #f5f0e8;font-size:13px"><span>${name}</span><span style="color:#9b2335;font-weight:700;margin-left:12px;white-space:nowrap">${price}</span></div>`;
+  const cats = state.customNBTodo.map((cat,ci)=>{
+    const catDone = cat.tasks.filter(t=>t.done).length;
+    const tasks = cat.tasks.map((t,ti)=>{
+      if (em) return `
+        <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid #f5f0e8">
+          <input value="${(t.task||"").replace(/"/g,"&quot;")}" data-nbtodo-task="${ci}-${ti}"
+            style="flex:1;border:1px solid #e0d0c0;border-radius:4px;padding:5px 7px;font-size:12px;outline:none;background:#faf5f0"/>
+          <button data-nbtodo-del="${ci}-${ti}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:16px;padding:0;flex-shrink:0">×</button>
+        </div>`;
+      return `
+        <label style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #f5f0e8;cursor:pointer">
+          <input type="checkbox" ${t.done?"checked":""} data-nbtodo-check="${ci}-${ti}"/>
+          <span style="flex:1;font-size:13px;color:${t.done?"#bbb":"#1a0a0a"};text-decoration:${t.done?"line-through":"none"};line-height:1.5">${t.task}</span>
+          ${t.done?`<span style="font-size:11px;color:#5a7a50;font-weight:700">✓</span>`:""}
+        </label>`;
     }).join("");
-    const addRow = em ? `<div style="padding:8px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center">
-      <span style="color:#9b2335;font-size:16px">+</span>
-      <input id="nb-new-name-${prefix}" placeholder="Item..." style="flex:2;border:1px solid #d4c4b0;border-radius:4px;padding:5px 7px;font-size:12px;outline:none;background:white"/>
-      <input id="nb-new-price-${prefix}" placeholder="$0" style="width:70px;border:1px solid #d4c4b0;border-radius:4px;padding:5px 7px;font-size:11px;text-align:right;outline:none;background:white"/>
-      <button data-nb-add="${prefix}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer">Add</button>
-    </div>` : "";
-    return rows + addRow;
-  };
+
+    const addRow = `
+      <div style="padding:8px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center">
+        <span style="color:#9b2335;font-size:16px">+</span>
+        <input id="nbtodo-new-${ci}" placeholder="Add task..." style="flex:1;border:1px solid #d4c4b4;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+        <button data-nbtodo-add="${ci}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">Add</button>
+      </div>`;
+
+    return `
+      <div style="margin-bottom:18px;border-left:3px solid ${cat.color};padding-left:16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">
+          <h3 style="font-size:15px;font-weight:700;color:#6a1010;flex:1">${cat.category}</h3>
+          <span style="font-size:11px;font-weight:700;color:${catDone===cat.tasks.length&&cat.tasks.length>0?"#5a7a50":cat.color}">${catDone}/${cat.tasks.length}</span>
+        </div>
+        <div class="card">${tasks}${addRow}</div>
+      </div>`;
+  }).join("");
 
   const editBar = em ? `
     <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
-      <button id="nb-done" style="background:#6b8a70;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
-      <button id="nb-reset" style="background:none;border:1px solid #c17f3e;color:#c17f3e;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset</button>
+      <button id="nb-done" style="background:#5a7a50;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+      <button id="nb-reset" style="background:none;border:1px solid #b05020;color:#b05020;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset</button>
     </div>
-    <p class="section-sub" style="margin-bottom:12px">Edit any cost card, item name, or price · × to delete · Add new rows</p>` :
-    `<button id="nb-edit" style="background:none;border:1px solid #7a6e5f;color:#7a6e5f;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit Night Before</button>`;
+    <p class="section-sub" style="margin-bottom:12px">Edit tasks · × to delete · Add tasks to any section</p>` :
+    `<button id="nb-edit" style="background:none;border:1px solid #9b2335;color:#9b2335;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit List</button>`;
 
   return `
-    <h2 class="section-title">🔥 Friday — Night Before BBQ</h2>
-    <p class="section-sub" style="margin-bottom:12px">Casual outdoor BBQ for 100 guests. Grilling staff + bonfire + s'mores.</p>
+    <h2 class="section-title">🔥 Day Before + Wedding Day</h2>
+    <p class="section-sub" style="margin-bottom:10px">Everything to handle the day before and day of your wedding. Check off as you go.</p>
     ${editBar}
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px">
-      ${costCards}
-      ${addCostRow}
-    </div>
-    <div class="card" style="margin-bottom:14px">
-      <div style="padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;border-bottom:1px solid #f0e4d4">🛒 ICA Food List</div>
-      ${buildEditableList(state.customNBFood,"food")}
-      <div style="display:flex;justify-content:space-between;padding:10px 16px;font-weight:700">
-        <span style="font-size:11px;text-transform:uppercase;letter-spacing:.05em">Total</span>
-        <span style="font-family:'Playfair Display',serif;font-size:15px;color:#9b2335">$718–$1,047</span>
+    <div style="font-size:13px;color:#9b2335;font-weight:700;margin-bottom:16px">${doneTasks} of ${allTasks} tasks done (${pct}%)</div>
+    <div class="prog-wrap"><div class="prog-bar" style="width:${pct}%;background:linear-gradient(90deg,#9b2335,#c04060)"></div></div>
+    ${cats}`;
+}
+
+// ── VENDORS TAB ───────────────────────────────────────────────────────────────
+const DEFAULT_VENDORS = [
+  { name:"Caterer", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Photographer", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"DJ", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Wedding Planner", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Bus Charter", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Florist", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Hair & Beauty", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Tent & Equipment Rental", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Priest / Officiant", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+  { name:"Grilling Staff", contact:"", phone:"", email:"", website:"", confirmed:false, notes:"" },
+];
+
+function buildVendorsTab() {
+  if (!state.customVendors) {
+    state.customVendors = DEFAULT_VENDORS.map(v=>({...v}));
+  }
+  const confirmed = state.customVendors.filter(v=>v.confirmed).length;
+
+  const rows = state.customVendors.map((v,i)=>`
+    <div style="background:white;border:1px solid #e0d0c0;border-radius:8px;padding:14px 16px;margin-bottom:12px;border-left:4px solid ${v.confirmed?"#5a7a50":"#9b2335"}">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+        <input value="${(v.name||"").replace(/"/g,"&quot;")}" data-vendor-name="${i}" placeholder="Vendor type"
+          style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#6a1010;border:none;border-bottom:1px solid #e0d0c0;outline:none;background:transparent;flex:1;min-width:120px;padding:2px 0"/>
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;flex-shrink:0">
+          <input type="checkbox" ${v.confirmed?"checked":""} data-vendor-confirmed="${i}"/>
+          <span style="font-size:12px;font-weight:700;color:${v.confirmed?"#5a7a50":"#9b2335"}">${v.confirmed?"✓ Confirmed":"Not confirmed"}</span>
+        </label>
+        <button data-vendor-del="${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:16px;padding:0;flex-shrink:0">×</button>
       </div>
-    </div>
-    <div class="card" style="margin-bottom:14px">
-      <div style="padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;border-bottom:1px solid #f0e4d4">🍷 Systembolaget Drinks</div>
-      ${buildEditableList(state.customNBDrinks,"drinks")}
-      <div style="display:flex;justify-content:space-between;padding:10px 16px;font-weight:700">
-        <span style="font-size:11px;text-transform:uppercase;letter-spacing:.05em">Total</span>
-        <span style="font-family:'Playfair Display',serif;font-size:15px;color:#9b2335">$883–$1,291</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <div>
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:3px">Contact name</div>
+          <input value="${(v.contact||"").replace(/"/g,"&quot;")}" data-vendor-contact="${i}" placeholder="Name"
+            style="width:100%;border:1px solid #e0d0c0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:#faf5f0"/>
+        </div>
+        <div>
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:3px">Phone</div>
+          <input value="${(v.phone||"").replace(/"/g,"&quot;")}" data-vendor-phone="${i}" placeholder="+46..."
+            style="width:100%;border:1px solid #e0d0c0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:#faf5f0"/>
+        </div>
       </div>
-    </div>`;
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <div>
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:3px">Email</div>
+          <input value="${(v.email||"").replace(/"/g,"&quot;")}" data-vendor-email="${i}" placeholder="email@example.com"
+            style="width:100%;border:1px solid #e0d0c0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:#faf5f0"/>
+        </div>
+        <div>
+          <div style="font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:3px">Website</div>
+          <input value="${(v.website||"").replace(/"/g,"&quot;")}" data-vendor-website="${i}" placeholder="www.example.se"
+            style="width:100%;border:1px solid #e0d0c0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:#faf5f0"/>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:3px">Notes (price, arrival time, contract details)</div>
+        <input value="${(v.notes||"").replace(/"/g,"&quot;")}" data-vendor-notes="${i}" placeholder="e.g. $2,000 · Arrives 10:30 AM · Contract signed"
+          style="width:100%;border:1px solid #e0d0c0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:#faf5f0"/>
+      </div>
+    </div>`).join("");
+
+  return `
+    <h2 class="section-title">📋 Vendor List</h2>
+    <p class="section-sub" style="margin-bottom:10px">All your wedding vendors in one place. Tap any field to edit. All changes save automatically.</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px">
+      <div style="font-size:13px;color:#5a7a50;font-weight:700">${confirmed} of ${state.customVendors.length} vendors confirmed</div>
+      <button id="vendor-add-new" style="background:#9b2335;color:white;border:none;border-radius:6px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer">+ Add Vendor</button>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" style="width:${state.customVendors.length>0?Math.round((confirmed/state.customVendors.length)*100):0}%;background:linear-gradient(90deg,#5a7a50,#7aaa7a)"></div></div>
+    ${rows}`;
 }
 
 function buildShoppingMiniList(title, items, total) {
@@ -1488,7 +1554,15 @@ function attachEvents() {
   });
   liveInput("[data-bedit-amt]", (inp,v)=>{
     const idx=parseInt(inp.dataset.beditAmt);
-    if(state.customBudget?.[idx]) state.customBudget[idx].budget=parseFloat(v)||0;
+    if(state.customBudget?.[idx]) {
+      state.customBudget[idx].budget=parseFloat(v.replace(/[^0-9.]/g,""))||0;
+      // Update the total display without full re-render
+      const totalBudget = state.customBudget.reduce((s,r)=>s+r.budget,0) + state.extraItems.reduce((s,r)=>s+r.budget,0);
+      const diff = totalBudget - (state.customBudget.reduce((s,r)=>s+(parseFloat(state.actualCosts[r.item])||0),0) + state.extraItems.reduce((s,r,i)=>s+(parseFloat(state.extraActual[i])||0),0));
+      // Update stat-val in header
+      const statVals = document.querySelectorAll('.stat-val');
+      if(statVals[0]) statVals[0].textContent = '$'+totalBudget.toLocaleString();
+    }
   });
   liveInput("[data-actual]", (inp,v)=>{
     state.actualCosts[inp.dataset.actual]=v.replace(/[^0-9.]/g,"");
@@ -1914,69 +1988,67 @@ function attachEvents() {
     });
   });
 
-  // ── NIGHT BEFORE EDIT HANDLERS ──────────────────────────────────────────────
+  // ── NIGHT BEFORE TODO HANDLERS ──────────────────────────────────────────────
+  document.getElementById("nb-edit")?.addEventListener("click",()=>{ state.nbEditMode=true; render(); });
   document.getElementById("nb-done")?.addEventListener("click",()=>{ state.nbEditMode=false; scheduleSave(); render(); });
   document.getElementById("nb-reset")?.addEventListener("click",()=>{
-    if(confirm("Reset Night Before to original?")) { state.customNBCosts=null; state.customNBFood=null; state.customNBDrinks=null; state.nbEditMode=false; scheduleSave(); render(); }
+    if(confirm("Reset night before list to defaults?")) { state.customNBTodo=null; state.nbEditMode=false; scheduleSave(); render(); }
+  });
+  document.querySelectorAll("[data-nbtodo-check]").forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      const [ci,ti]=cb.dataset.nbtodoCheck.split("-").map(Number);
+      if(!state.customNBTodo) state.customNBTodo=DEFAULT_NB_TODO.map(c=>({...c,tasks:c.tasks.map(t=>({...t}))}));
+      state.customNBTodo[ci].tasks[ti].done=cb.checked;
+      scheduleSave(); render();
+    });
+  });
+  liveInput("[data-nbtodo-task]",(inp,v)=>{
+    const [ci,ti]=inp.dataset.nbtodoTask.split("-").map(Number);
+    if(state.customNBTodo?.[ci]?.tasks?.[ti]) state.customNBTodo[ci].tasks[ti].task=v;
+  });
+  document.querySelectorAll("[data-nbtodo-del]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const [ci,ti]=btn.dataset.nbtodoDel.split("-").map(Number);
+      state.customNBTodo[ci].tasks.splice(ti,1); scheduleSave(); render();
+    });
+  });
+  document.querySelectorAll("[data-nbtodo-add]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const ci=parseInt(btn.dataset.nbtodoAdd);
+      const val=(document.getElementById(`nbtodo-new-${ci}`)?.value||"").trim();
+      if(!val) return;
+      if(!state.customNBTodo) state.customNBTodo=DEFAULT_NB_TODO.map(c=>({...c,tasks:c.tasks.map(t=>({...t}))}));
+      state.customNBTodo[ci].tasks.push({task:val,done:false});
+      scheduleSave(); render();
+    });
   });
 
-  // Cost card edits
-  document.querySelectorAll("[data-nbc-label]").forEach(inp=>{
-    inp.addEventListener("change",()=>{ state.customNBCosts[parseInt(inp.dataset.nbcLabel)].l=inp.value; scheduleSave(); });
-  });
-  document.querySelectorAll("[data-nbc-val]").forEach(inp=>{
-    inp.addEventListener("change",()=>{ state.customNBCosts[parseInt(inp.dataset.nbcVal)].v=inp.value; scheduleSave(); render(); });
-  });
-  document.querySelectorAll("[data-nbc-range]").forEach(inp=>{
-    inp.addEventListener("change",()=>{ state.customNBCosts[parseInt(inp.dataset.nbcRange)].r=inp.value; scheduleSave(); });
-  });
-  document.querySelectorAll("[data-nbc-del]").forEach(btn=>{
-    btn.addEventListener("click",()=>{ state.customNBCosts.splice(parseInt(btn.dataset.nbcDel),1); scheduleSave(); render(); });
-  });
-  document.getElementById("nbc-add")?.addEventListener("click",()=>{
-    const l=(document.getElementById("nbc-new-label")?.value||"").trim();
-    const v=(document.getElementById("nbc-new-val")?.value||"").trim()||"$0";
-    if(!l) return;
-    state.customNBCosts.push({l,v,r:"",w:false});
+  // ── VENDOR HANDLERS ─────────────────────────────────────────────────────────
+  document.getElementById("vendor-add-new")?.addEventListener("click",()=>{
+    if(!state.customVendors) state.customVendors=DEFAULT_VENDORS.map(v=>({...v}));
+    state.customVendors.push({name:"New Vendor",contact:"",phone:"",email:"",confirmed:false,notes:""});
     scheduleSave(); render();
   });
-
-  // Food/drinks list edits
-  document.querySelectorAll("[data-nb-name]").forEach(inp=>{
-    inp.addEventListener("change",()=>{
-      const [prefix,i]=inp.dataset.nbName.split("-"); const idx=parseInt(i);
-      if(prefix==="food") state.customNBFood[idx][0]=inp.value;
-      else state.customNBDrinks[idx][0]=inp.value;
-      scheduleSave();
+  document.querySelectorAll("[data-vendor-confirmed]").forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      const i=parseInt(cb.dataset.vendorConfirmed);
+      state.customVendors[i].confirmed=cb.checked; scheduleSave(); render();
     });
   });
-  document.querySelectorAll("[data-nb-price]").forEach(inp=>{
-    inp.addEventListener("change",()=>{
-      const [prefix,i]=inp.dataset.nbPrice.split("-"); const idx=parseInt(i);
-      if(prefix==="food") state.customNBFood[idx][1]=inp.value;
-      else state.customNBDrinks[idx][1]=inp.value;
-      scheduleSave();
-    });
-  });
-  document.querySelectorAll("[data-nb-del]").forEach(btn=>{
+  document.querySelectorAll("[data-vendor-del]").forEach(btn=>{
     btn.addEventListener("click",()=>{
-      const [prefix,i]=btn.dataset.nbDel.split("-"); const idx=parseInt(i);
-      if(prefix==="food") state.customNBFood.splice(idx,1);
-      else state.customNBDrinks.splice(idx,1);
-      scheduleSave(); render();
+      const i=parseInt(btn.dataset.vendorDel);
+      state.customVendors.splice(i,1);
+      scheduleSave();
+      render();
     });
   });
-  document.querySelectorAll("[data-nb-add]").forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      const prefix=btn.dataset.nbAdd;
-      const name=(document.getElementById(`nb-new-name-${prefix}`)?.value||"").trim();
-      const price=(document.getElementById(`nb-new-price-${prefix}`)?.value||"").trim()||"";
-      if(!name) return;
-      if(prefix==="food") state.customNBFood.push([name,price]);
-      else state.customNBDrinks.push([name,price]);
-      scheduleSave(); render();
-    });
-  });
+  liveInput("[data-vendor-name]",(inp,v)=>{ if(state.customVendors?.[parseInt(inp.dataset.vendorName)]) state.customVendors[parseInt(inp.dataset.vendorName)].name=v; });
+  liveInput("[data-vendor-contact]",(inp,v)=>{ if(state.customVendors?.[parseInt(inp.dataset.vendorContact)]) state.customVendors[parseInt(inp.dataset.vendorContact)].contact=v; });
+  liveInput("[data-vendor-phone]",(inp,v)=>{ if(state.customVendors?.[parseInt(inp.dataset.vendorPhone)]) state.customVendors[parseInt(inp.dataset.vendorPhone)].phone=v; });
+  liveInput("[data-vendor-email]",(inp,v)=>{ if(state.customVendors?.[parseInt(inp.dataset.vendorEmail)]) state.customVendors[parseInt(inp.dataset.vendorEmail)].email=v; });
+  liveInput("[data-vendor-website]",(inp,v)=>{ if(state.customVendors?.[parseInt(inp.dataset.vendorWebsite)]) state.customVendors[parseInt(inp.dataset.vendorWebsite)].website=v; });
+  liveInput("[data-vendor-notes]",(inp,v)=>{ if(state.customVendors?.[parseInt(inp.dataset.vendorNotes)]) state.customVendors[parseInt(inp.dataset.vendorNotes)].notes=v; });
 }
 
 
@@ -2024,6 +2096,8 @@ try {
     state.customNBFood        = d.customNBFood        || null;
     state.customNBDrinks      = d.customNBDrinks      || null;
     state.customPacking       = d.customPacking       || null;
+    state.customVendors       = d.customVendors       || null;
+    state.customNBTodo        = d.customNBTodo        || null;
     state.lastSaved           = d.savedAt             || null;
   }
 } catch(e) {}
@@ -2062,6 +2136,8 @@ saveToCloud = async function() {
       customNBFood:        state.customNBFood        || null,
       customNBDrinks:      state.customNBDrinks      || null,
       customPacking:       state.customPacking       || null,
+      customVendors:       state.customVendors       || null,
+      customNBTodo:        state.customNBTodo        || null,
       savedAt:             new Date().toISOString(),
     };
     localStorage.setItem(SYNC_KEY, JSON.stringify(payload));
