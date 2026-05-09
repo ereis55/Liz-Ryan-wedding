@@ -1,258 +1,2114 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Liz & Ryan 💍"/>
 <title>Liz & Ryan Wedding 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Georgia,serif;background:#faf7f2;color:#3d2e1e;min-height:100vh}
-.header{background:linear-gradient(135deg,#3d2e1e,#5c4433);padding:32px 20px;text-align:center}
-.header h1{color:#faf7f2;font-size:28px;font-weight:400;margin-bottom:4px}
-.header p{color:#c4a47a;font-size:15px;font-style:italic;margin-bottom:16px}
-.stats{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
-.stat-val{color:#b5855a;font-size:22px;font-weight:700}
-.stat-lbl{color:#a08060;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
-.tabs{background:#faf7f2;border-bottom:1px solid #e8d8c4;padding:8px;display:flex;gap:4px;flex-wrap:wrap;justify-content:center;position:sticky;top:0;z-index:10}
-.tab{background:none;border:none;padding:8px 12px;border-radius:5px;font-size:11px;font-weight:700;cursor:pointer;color:#7a6355;text-transform:uppercase}
-.tab.on{background:#b5855a;color:white}
-.content{max-width:800px;margin:0 auto;padding:20px 16px}
-.card{background:white;border:1px solid #e8d8c4;border-radius:8px;padding:16px;margin-bottom:14px}
-h2{font-size:20px;font-weight:400;margin-bottom:8px}
-p{font-size:13px;color:#7a6355;line-height:1.6}
-.item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f5ede0;font-size:13px}
-.item:last-child{border-bottom:none}
-input[type=checkbox]{accent-color:#b5855a;width:16px;height:16px}
-.done{text-decoration:line-through;color:#bbb}
-.add{display:flex;gap:8px;margin-top:10px}
-.add input{flex:1;border:1px solid #d4c4b0;border-radius:6px;padding:8px;font-size:13px;font-family:sans-serif;outline:none}
-.add button{background:#b5855a;color:white;border:none;border-radius:6px;padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer}
-.budget-row{display:grid;grid-template-columns:1fr 80px 80px;gap:8px;padding:8px 0;border-bottom:1px solid #f5ede0;align-items:center;font-size:13px}
-.budget-row:last-child{border-bottom:none}
-.actual{border:1px solid #c8e0c0;border-radius:4px;padding:4px 6px;font-size:12px;text-align:right;width:100%;background:#f0faf0;outline:none;font-family:sans-serif}
-.pill{font-size:10px;padding:2px 6px;border-radius:8px;font-weight:700}
-.pill-h{background:#fce8e8;color:#c0392b}
-.pill-m{background:#fef3e2;color:#c17f3e}
-.pill-l{background:#eef5ee;color:#5a8a60}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Lato',sans-serif;background:#f5f0e8;min-height:100vh;color:#1a0a0a;overscroll-behavior:none}
+.pt{font-family:'Playfair Display',serif}
+h1,h2,h3{font-family:'Playfair Display',serif}
+input,select,button{font-family:'Lato',sans-serif}
+/* NAV */
+.nav-wrap{background:#f5f0e8;border-bottom:1px solid #d4c4b4;padding:6px 8px;display:flex;gap:4px;flex-wrap:wrap;justify-content:center;position:sticky;top:0;z-index:100;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.nav-btn{background:none;border:none;cursor:pointer;padding:7px 10px;border-radius:5px;font-size:11px;letter-spacing:.04em;transition:all .18s;color:#7a3a2a;font-weight:700;text-transform:uppercase;white-space:nowrap}
+.nav-btn:hover,.nav-btn.act{background:#9b2335;color:white}
+/* HEADER */
+.header{background:linear-gradient(135deg,#7a1a1a,#9b2335);padding:28px 20px 20px;text-align:center;position:relative;overflow:hidden}
+.header-bg{position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 50%,rgba(255,200,180,.15) 0%,transparent 60%),radial-gradient(circle at 80% 20%,rgba(255,200,180,.1) 0%,transparent 50%)}
+.header-inner{position:relative}
+.header h1{color:#f5f0e8;font-size:32px;font-weight:400;margin-bottom:3px}
+.header p{color:#f0ccc0;font-size:15px;font-style:italic;margin-bottom:16px}
+.header-stats{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-val{font-family:'Playfair Display',serif;color:#ffd0c0;font-size:20px;font-weight:700}
+.stat-lbl{color:#e0b0a0;font-size:9px;text-transform:uppercase;letter-spacing:.1em}
+.budget-note{background:#5a0f0f;padding:8px 16px;text-align:center;color:#f0ccc0;font-size:12px;line-height:1.5}
+/* CONTENT */
+.content{max-width:860px;margin:0 auto;padding:20px 14px 40px}
+/* CARDS */
+.card{background:white;border:1px solid #e0d0c0;border-radius:8px;overflow:hidden;margin-bottom:14px}
+.card-header{padding:12px 16px;background:#7a1a1a;color:#f5f0e8;font-size:15px;font-weight:400}
+.section-title{font-size:21px;font-weight:400;margin-bottom:4px;color:#7a1a1a}
+.section-sub{color:#6a3a2a;font-size:13px;margin-bottom:18px}
+/* TABLE */
+.tbl-head{display:grid;padding:7px 13px;background:#f5f0e8;border-bottom:1px solid #e0d0c0;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a}
+.tbl-row{display:grid;padding:9px 13px;border-bottom:1px solid #f5f0e8;align-items:center;transition:background .12s}
+.tbl-row:hover{background:rgba(155,35,53,.06)}
+.tbl-foot{display:grid;padding:11px 13px;background:#7a1a1a}
+/* STATUS DOTS */
+.dot{border-radius:50%;width:17px;height:17px;display:inline-flex;align-items:center;justify-content:center;font-size:9px;color:white;flex-shrink:0}
+.dot-ok{background:#5a7a50}
+.dot-warn{background:#b05020}
+.dot-note{background:#4a6a9a}
+/* PROGRESS BAR */
+.prog-wrap{height:5px;background:#e0d0c0;border-radius:3px;overflow:hidden;margin-bottom:20px}
+.prog-bar{height:100%;border-radius:3px;transition:width .4s}
+/* INPUTS */
+.inp{border:1px solid #d4c4b0;border-radius:5px;padding:7px 10px;font-size:13px;color:#1a0a0a;outline:none;background:#faf5f0;width:100%}
+.inp:focus{border-color:#9b2335;background:#fff}
+.actual-inp{width:78px;padding:5px 6px 5px 16px;border:1px solid #c8e0c0;border-radius:5px;font-size:12px;text-align:right;background:#fafcfa;color:#1a4a1a;outline:none}
+.actual-inp:focus{border-color:#4a8a50;background:#f0f8f0}
+.actual-wrap{position:relative;display:inline-flex;align-items:center}
+.actual-prefix{position:absolute;left:7px;font-size:11px;color:#4a8a50;font-weight:700;pointer-events:none}
+/* PILL */
+.pill{font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.pill-high{background:#fce8e8;color:#9b2335}
+.pill-med{background:#fef3e2;color:#b05020}
+.pill-low{background:#eef5ee;color:#4a7a40}
+/* CHECKBOX */
+input[type=checkbox]{accent-color:#9b2335;width:16px;height:16px;cursor:pointer;flex-shrink:0}
+/* TASK ROW */
+.task-row{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-bottom:1px solid #f0e8e0;cursor:pointer;transition:background .12s}
+.task-row:hover{background:rgba(155,35,53,.05)}
+.task-row label{display:flex;align-items:flex-start;gap:10px;cursor:pointer;width:100%}
+/* TIMELINE */
+.phase-wrap{margin-bottom:20px;border-left:3px solid #9b2335;padding-left:16px}
+.phase-hd{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+/* SHOPPING */
+.shop-store{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:700;color:white}
+/* ADD ROW */
+.add-row{padding:9px 14px;background:#faf5f0;border-top:1px dashed #d4c4b4;display:flex;gap:8px;align-items:center}
+/* DAY TIMELINE */
+.day-card{border-radius:8px;overflow:hidden;margin-bottom:16px;border-top:4px solid}
+.day-event{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:9px 16px;border-bottom:1px solid #f5f0e8;align-items:start}
+/* GRAND SUMMARY */
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.summary-card{text-align:center;padding:12px 6px;background:rgba(255,255,255,.07);border-radius:6px}
+/* SYNC BADGE */
+.sync-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#5a8a50;padding:4px 10px;background:rgba(90,138,80,.12);border-radius:20px;margin-bottom:16px}
+.sync-dot{width:7px;height:7px;border-radius:50%;background:#5a8a50;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+/* MOBILE SCROLL */
+.scr{max-height:62vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.scr::-webkit-scrollbar{width:4px}
+.scr::-webkit-scrollbar-thumb{background:#c0a090;border-radius:3px}
+/* EMPTY STATE */
+.empty{text-align:center;padding:36px 20px;border:1px dashed #d4c4b4;border-radius:8px;color:#8a5a4a}
+/* OVER/UNDER */
+.over{color:#c02030}
+.under{color:#4a8a50}
+/* GRID HELPERS */
+.budget-cols{grid-template-columns:20px 1fr 82px 100px 88px 1fr}
+.budget-cols-mobile{grid-template-columns:20px 1fr 80px 86px 28px}
+@media(max-width:600px){
+  .budget-cols{grid-template-columns:20px 1fr 70px 80px}
+  .hide-mobile{display:none!important}
+  .summary-grid{grid-template-columns:1fr 1fr}
+  .nav-btn{font-size:10px;padding:6px 7px}
+  .header h1{font-size:26px}
+}
+select{border:1px solid #d4c4b0;border-radius:5px;padding:7px 8px;font-size:12px;color:#1a0a0a;background:#faf5f0;outline:none}
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>Liz &amp; Ryan</h1>
-  <p>Gråbogården, Gothenburg — 2027</p>
-  <div class="stats">
-    <div><div class="stat-val" id="budgetVal">$39,000</div><div class="stat-lbl">Budget</div></div>
-    <div><div class="stat-val" id="actualVal" style="color:#888">$0 spent</div><div class="stat-lbl">Actual</div></div>
-    <div><div class="stat-val">100</div><div class="stat-lbl">Guests</div></div>
-    <div><div class="stat-val" id="taskVal">0/45</div><div class="stat-lbl">Tasks Done</div></div>
+
+<!-- APP ROOT -->
+<div id="app">
+  <div style="text-align:center;padding:60px 20px;color:#7a3a2a">
+    <div style="font-size:32px;margin-bottom:12px">💍</div>
+    <div style="font-family:'Playfair Display',serif;font-size:20px;margin-bottom:8px">Loading...</div>
   </div>
 </div>
 
-<div class="tabs" id="tabs"></div>
-<div class="content" id="content"></div>
-
 <script>
-const KEY = 'liz-ryan-2027';
-let S = {};
-try { S = JSON.parse(localStorage.getItem(KEY)||'{}'); } catch(e){}
-S.tasks = S.tasks||{}; S.actual = S.actual||{}; S.shop = S.shop||{}; S.extra = S.extra||[]; S.shopCustom = S.shopCustom||{};
-let tab = 'budget';
+// ─── DATA ───────────────────────────────────────────────────────────────────
+const BUDGET_LINES = [
+  // ── VENUE & LOGISTICS ──
+  { item:"Hotel / Accommodation", budget:0, low:0, high:0, notes:"✅ FREE — overnight stays at Gråbogården included in venue.", status:"ok" },
+  { item:"Transport – 2 Buses (church → venue, round trip)", budget:3200, low:1600, high:3000, notes:"✅ 2 × 50-seat coaches, ~30 km. Right in range.", status:"ok" },
+  { item:"Tent + Equipment (chairs, linens, chandelier, draping, vases, cutlery, projector, speaker)", budget:4000, low:5000, high:9000, notes:"⚠️ Tent alone = $1,400–$3,300. All items together likely $5,000–$9,000. Confirm what Gråbogården provides.", status:"warning" },
 
-function save(){ try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){} }
+  // ── FOOD ──
+  { item:"Food – Friday Night BBQ (100 ppl, incl. grilling staff + s'mores + decor)", budget:4200, low:3500, high:5500, notes:"✅ Consolidated: BBQ food $2,000 + grilling staff $1,000 + fire/s'mores $1,000 + simple decor $200. Covers ICA shop + 2 staff + firewood.", status:"ok" },
+  { item:"Food – Wedding Buffet (100 ppl)", budget:7000, low:6000, high:10000, notes:"✅ Gråbogården buffet ~800–1,500 SEK/person. $7,000 is low-mid — confirm with caterer.", status:"ok" },
+  { item:"Breakfast – Sat + Sun (16 ppl, 2 mornings)", budget:500, low:350, high:700, notes:"✅ Self-serve ICA spread. ~$175/day. $500 covers both mornings with buffer.", status:"ok" },
 
-const BUDGET = [
-  {item:'Hotel / Accommodation',budget:0,low:0,high:0,cat:'Venue'},
-  {item:'Transport - 2 Buses',budget:3200,low:1600,high:3000,cat:'Venue'},
-  {item:'Tent + Equipment',budget:4000,low:5000,high:9000,cat:'Venue'},
-  {item:'Food - Friday Night BBQ',budget:4200,low:3500,high:5500,cat:'Food'},
-  {item:'Food - Wedding Buffet',budget:7000,low:6000,high:10000,cat:'Food'},
-  {item:'Breakfast Sat + Sun',budget:500,low:350,high:700,cat:'Food'},
-  {item:'Liquor - Friday Night',budget:2000,low:883,high:1291,cat:'Drinks'},
-  {item:'Liquor - Wedding Open Bar',budget:5000,low:1728,high:2572,cat:'Drinks'},
-  {item:'Servers / Catering Staff',budget:2000,low:1500,high:3000,cat:'People'},
-  {item:'Wedding Planner',budget:0,low:500,high:2000,cat:'People'},
-  {item:'Photographer',budget:2000,low:2000,high:3500,cat:'People'},
-  {item:'DJ',budget:1000,low:500,high:1500,cat:'People'},
-  {item:'Wedding Dress',budget:2000,low:1500,high:3000,cat:'Bridal'},
-  {item:'Dress Alterations',budget:300,low:200,high:500,cat:'Bridal'},
-  {item:'Reception Dress',budget:300,low:150,high:500,cat:'Bridal'},
-  {item:'Liz Hair + Makeup',budget:200,low:250,high:400,cat:'Bridal'},
-  {item:'Bridesmaids Hair + Beauty',budget:2000,low:1200,high:2500,cat:'Bridal'},
-  {item:'Ryan Gets Ready',budget:1000,low:200,high:500,cat:'Bridal'},
-  {item:'Flowers',budget:1000,low:1500,high:3000,cat:'Decor'},
-  {item:'Invitations + Postage',budget:300,low:250,high:400,cat:'Extras'},
-  {item:'Entertainment (cameras etc)',budget:1000,low:300,high:800,cat:'Extras'},
+  // ── DRINKS ──
+  { item:"Liquor – Friday Night (beer, wine, Aperol spritz)", budget:2000, low:883, high:1291, notes:"✅ Systembolaget list = $883–$1,291. $2,000 gives solid buffer.", status:"ok" },
+  { item:"Liquor – Wedding Open Bar (5–6 hrs, 100 ppl)", budget:5000, low:1728, high:2572, notes:"✅ Systembolaget list = $1,728–$2,572. $5,000 is generous — great buffer.", status:"ok" },
+
+  // ── PEOPLE & SERVICE ──
+  { item:"Servers / Catering Staff (6–9 people)", budget:2000, low:1500, high:3000, notes:"✅ Reasonable for 6–9 servers including bartenders. Confirm bartenders are included.", status:"ok" },
+  { item:"Wedding / Day-Of Planner", budget:0, low:500, high:2000, notes:"🗒️ Not yet budgeted — essential! ~$500–$2,000. Highly recommended.", status:"note" },
+  { item:"Photographer (8–10 hrs full coverage)", budget:2000, low:2000, high:3500, notes:"⚠️ Swedish photographers = 15,000–35,000 SEK ($1,500–$3,400). Consider budgeting $2,500–$3,000.", status:"warning" },
+  { item:"DJ", budget:1000, low:500, high:1500, notes:"⚠️ Sweden DJs run 5,000–15,000 SEK ($500–$1,500). $1,000 is tight — confirm pricing.", status:"warning" },
+
+  // ── BRIDAL & PERSONAL ──
+  { item:"Wedding Dress", budget:2000, low:1500, high:3000, notes:"✅ Reasonable. Mid-range bridal in Sweden runs $1,500–$3,000.", status:"ok" },
+  { item:"Dress Alterations", budget:300, low:200, high:500, notes:"✅ Swedish tailoring ~$200–$500 depending on complexity.", status:"ok" },
+  { item:"Reception / Party Dress (second look)", budget:300, low:150, high:500, notes:"✅ Good budget for a fun second look.", status:"ok" },
+  { item:"Liz Hair + Makeup (bridal)", budget:200, low:250, high:400, notes:"⚠️ Sweden bridal hair = 1,500–3,500 SEK (~$150–$340). Budget at least $300.", status:"warning" },
+  { item:"Bridesmaids Hair + Beauty (~5 people)", budget:2000, low:1200, high:2500, notes:"✅ ~$240–$500 per bridesmaid. Well budgeted.", status:"ok" },
+  { item:"Ryan Gets Ready (barber, grooming, clothing)", budget:1000, low:200, high:500, notes:"✅ Covers barber, grooming, any rental. Has buffer.", status:"ok" },
+
+  // ── FLOWERS & DECOR ──
+  { item:"Flowers (ceremony arch + 10–12 table arrangements)", budget:1000, low:1500, high:3000, notes:"⚠️ Low for 100 guests. Bulk market flowers = $1,000–$1,500. Florist-arranged = $2,000–$3,000.", status:"warning" },
+
+  // ── STATIONERY & EXTRAS ──
+  { item:"Invitations + Postage (100 guests)", budget:300, low:250, high:400, notes:"✅ ~$2.50–$4/invite. On target.", status:"ok" },
+  { item:"Entertainment (disposable cameras, table games, etc.)", budget:1000, low:300, high:800, notes:"✅ Disposable cameras ($150–$300) + fun extras. Generous.", status:"ok" },
+];
+
+const YOUR_TOTAL    = BUDGET_LINES.reduce((s,r)=>s+r.budget,0);
+const REALISTIC_LOW = BUDGET_LINES.reduce((s,r)=>s+r.low,0);
+const REALISTIC_HIGH= BUDGET_LINES.reduce((s,r)=>s+r.high,0);
+
+const SWEDEN_TRIP = [
+  { category:"📍 Venue — Gråbogården", color:"#9b2335", tasks:[
+    {task:"Walk the full property — identify tent location, ceremony spot, bus parking",tip:"Take videos, not just photos. You'll want to re-watch the space at home."},
+    {task:"Confirm what's included: chairs, linens, tables, kitchen access, bedding",tip:"Get the full list in writing — could save you $2,000–$4,000 on rentals."},
+    {task:"Confirm logistics: delivery access for tent, vendor arrival windows, noise curfew",tip:"Ask if there's a noise ordinance — this affects DJ end time."},
+    {task:"Taste food + review buffet menu options with kitchen team",tip:"They specialize in seasonal local buffets. Ask about Mediterranean and Asian options."},
+    {task:"Confirm overnight capacity + sleeping setup for 16 breakfast guests",tip:"Bedding included per your plan — just confirm exact room count and layout."},
+    {task:"Photograph the space at the same time of day as your ceremony",tip:"Afternoon golden light at Gråbogården is stunning — see it in your time slot."},
+  ]},
+  { category:"⛪ Church & Ceremony", color:"#8a3030", tasks:[
+    {task:"Meet with the priest — confirm availability for your 2027 date",tip:"Swedish churches book 1–2 years out for weddings. Don't delay this."},
+    {task:"Understand requirements: pre-marital meetings, documents needed",tip:"As non-Swedish residents, ask specifically what paperwork is required."},
+    {task:"Walk the church exterior — plan the rice throw exit + photo spots",tip:"Coordinate the exit route with your photographer."},
+    {task:"Ask about church music: organ available? Can you bring your own musician?",tip:"Many Swedish churches include an organist — ask if it's part of the fee."},
+    {task:"Drive the church → Gråbogården bus route yourself",tip:"Confirm the ~30 min timing. Factor in 100 people boarding two buses."},
+  ]},
+  { category:"🎵 DJ & Entertainment", color:"#4a7a50", tasks:[
+    {task:"Meet 2–3 local DJs — hear samples, discuss your music vibe",tip:"Swedish summer wedding DJs book 1+ year out. Book before you leave."},
+    {task:"Confirm DJ equipment: do they bring speakers, or do you need to rent?",tip:"Affects your tent rental needs."},
+    {task:"Discuss full flow: cocktail hour, dinner set, late-night dancing",tip:"Ask if they can do soft sets during dinner and go bigger for dancing."},
+  ]},
+  { category:"📸 Photographer", color:"#7a2a2a", tasks:[
+    {task:"Meet 2–3 Gothenburg photographers — review full galleries (not just highlights)",tip:"Consistency matters more than a few great shots."},
+    {task:"Discuss coverage: ceremony, cocktail hour, reception, getting-ready shots",tip:"Ask about a second shooter — worth it for 100 guests."},
+    {task:"Do a test shoot together at Gråbogården or somewhere pretty",tip:"You want to feel comfortable in front of their camera."},
+    {task:"Confirm contract, deposit amount, and photo delivery timeline",tip:"Swedish photographers typically deliver in 6–10 weeks. Get it in writing."},
+  ]},
+  { category:"💐 Flowers & Decor", color:"#8a2040", tasks:[
+    {task:"Visit Göteborgs Saluhall or local flower market — see bulk options + pricing",tip:"Swedish wildflowers and seasonal blooms are gorgeous and affordable."},
+    {task:"Meet 1–2 florists for a quote on ceremony arch + 10–12 table arrangements",tip:"Show them your inspo photos."},
+    {task:"Confirm flower season for your wedding month",tip:"Local summer flowers are just as beautiful as imported roses, at half the price."},
+  ]},
+  { category:"💇 Hair & Beauty", color:"#7a5e70", tasks:[
+    {task:"Book a bridal hair trial at a Gothenburg salon ($150–$250)",tip:"Instagram search 'bruduppsättning Göteborg' to find the best stylists."},
+    {task:"Book the salon for wedding morning: Liz + 5 bridesmaids",tip:"You'll need 2–3 stylists working simultaneously — confirm capacity."},
+    {task:"Confirm timing so everyone's ready by 1:00 PM",tip:"5 bridesmaids + Liz = start no later than 9:00–10:00 AM."},
+  ]},
+  { category:"🗓️ Wedding Planner", color:"#3a5a8a", tasks:[
+    {task:"Meet 2–3 wedding planners / day-of coordinators in Gothenburg",tip:"Even a day-of coordinator ($500–$1,000) is worth it."},
+    {task:"Review their vendor relationships — can they get better rates?",tip:"A good planner often pays for themselves through vendor discounts."},
+    {task:"Confirm language — make sure they coordinate comfortably in English",tip:"Most Gothenburg planners speak fluent English, but confirm."},
+  ]},
+  { category:"🛒 Logistics", color:"#4a7a50", tasks:[
+    {task:"Confirm bridal suite / getting-ready space (light, mirrors, room for 6 + photographer)",tip:"If Gråbogården doesn't have this, identify a nearby hotel room."},
+    {task:"Visit Systembolaget — ask about bulk pre-orders for 300+ bottles/cans",tip:"Large orders can often be pre-ordered for convenient pickup."},
+    {task:"Visit ICA Maxi near Gråbo — confirm they carry your shopping list",tip:"ICA Maxi in Lerum or Partille are the closest large stores (~15 min away)."},
+    {task:"Confirm outdoor space for Friday BBQ — fire pit, field size",tip:"Walk the outdoor area and confirm fire pit logistics."},
+    {task:"🥂 Enjoy Gothenburg together — celebrate being in your wedding city!",tip:"Dinner at Fiskekrogen, sunset archipelago cruise!"},
+  ]},
 ];
 
 const TIMELINE = [
-  {phase:'12+ Months Out',tasks:['Book Grabogarden venue','Hire wedding planner ($500-$2,000)','Book tent + equipment rental ($4,000-$9,000)','Meet with priest - confirm date','Book photographer ($2,000-$3,000)','Book DJ ($1,000)','Finalize guest list - 100 people','Book bus charter (2 x 50-seaters)','Send Save the Dates','Order + send invitations ($300)']},
-  {phase:'9-12 Months Out',tasks:['Order wedding dress ($2,000)','Book hair salon for Liz + bridesmaids','Find + confirm caterer for buffet ($7,000)','Confirm servers / catering staff ($2,000)','Decide bridesmaids dress color scheme','Decide groom + groomsmen outfits']},
-  {phase:'6-9 Months Out',tasks:['Chase RSVPs','Book grilling staff for Friday BBQ','Book florist or bulk flower plan','Order reception dress ($300)','Confirm space for Ryan to get ready','Confirm bridal suite at Grabogarden']},
-  {phase:'3-6 Months Out',tasks:['Finalize guest count - build seating chart','Dress alterations ($300)','Print seating cards + table numbers','Confirm DJ set list + ceremony music','Order rice packets for church exit','Order disposable cameras','Buy picnic blankets ($200)','Book bridal hair trial']},
-  {phase:'1-3 Months Out',tasks:['Systembolaget - wedding open bar ($5,000)','Systembolaget - Friday night drinks ($2,000)','ICA - Friday BBQ food ($1,500-$2,000)','ICA - Sat/Sun breakfast ($500)','Confirm all vendor arrival times','Send final headcount to caterer','Confirm bus pickup times with driver','Prepare gratuity envelopes']},
-  {phase:'Week Of',tasks:['Tent + equipment set up at Grabogarden','Pick up flowers - arrange centerpieces','Confirm final bus schedule','Pack bridal bag: dress, shoes, vows, emergency kit','Place cameras + seating cards on tables','Hand out gratuity envelopes','Charge all devices']},
+  { phase:"12+ Months Out", emoji:"📅", tasks:[
+    {task:"Book Gråbogården — lock in your 2027 date", priority:"high"},
+    {task:"Hire + confirm wedding planner / day-of coordinator ($500–$2,000)", priority:"high"},
+    {task:"Book tent + full equipment rental ($4,000–$9,000) — vendors book out early!", priority:"high"},
+    {task:"Meet with priest — confirm date + documentation requirements", priority:"high"},
+    {task:"Book photographer ($2,000–$3,000 — best ones go fast)", priority:"high"},
+    {task:"Book DJ ($1,000 — confirm Sweden pricing)", priority:"high"},
+    {task:"Set + finalize guest list — confirm ~100 people", priority:"high"},
+    {task:"Book bus charter (2 × 50-seaters, church → Gråbogården + return)", priority:"high"},
+    {task:"Send Save the Dates — especially for international guests", priority:"high"},
+    {task:"Order + send invitations with RSVP cards ($300)", priority:"high"},
+  ]},
+  { phase:"9–12 Months Out", emoji:"👗", tasks:[
+    {task:"Order wedding dress ($2,000 — allow 6 months for delivery + alterations)", priority:"high"},
+    {task:"Book hair salon for Liz + bridesmaids ($2,200)", priority:"medium"},
+    {task:"Find + confirm caterer for wedding buffet ($7,000)", priority:"high"},
+    {task:"Confirm servers / catering staff 6–9 people ($2,000)", priority:"medium"},
+    {task:"Decide bridesmaids dress color scheme + order", priority:"medium"},
+    {task:"Decide groom + groomsmen outfits ($1,000)", priority:"medium"},
+  ]},
+  { phase:"6–9 Months Out", emoji:"✉️", tasks:[
+    {task:"Chase RSVPs — set firm deadline", priority:"high"},
+    {task:"Book grilling staff for Friday BBQ (2 people, $1,000)", priority:"medium"},
+    {task:"Book florist or confirm bulk flower market plan ($1,000–$2,000)", priority:"medium"},
+    {task:"Buy / order reception dress ($300)", priority:"low"},
+    {task:"Confirm space for Ryan to get ready", priority:"low"},
+    {task:"Confirm bridal suite / getting-ready space at Gråbogården", priority:"medium"},
+  ]},
+  { phase:"3–6 Months Out", emoji:"📋", tasks:[
+    {task:"Finalize guest count — build seating chart", priority:"high"},
+    {task:"Dress alterations ($300)", priority:"high"},
+    {task:"Print seating cards + table numbers", priority:"medium"},
+    {task:"Confirm DJ full set list + ceremony music", priority:"medium"},
+    {task:"Order rice packets for church exit", priority:"low"},
+    {task:"Order disposable cameras for tables", priority:"low"},
+    {task:"Buy picnic blankets for Friday night ($200)", priority:"low"},
+    {task:"Book bridal hair trial at Gothenburg salon", priority:"medium"},
+  ]},
+  { phase:"1–3 Months Out", emoji:"🛒", tasks:[
+    {task:"Systembolaget — pre-order wedding open bar stock ($5,000)", priority:"high"},
+    {task:"Systembolaget — Friday night drinks ($2,000)", priority:"high"},
+    {task:"ICA — Friday BBQ food shop ($1,500–$2,000)", priority:"high"},
+    {task:"ICA — Sat/Sun breakfast for 16 ($500)", priority:"medium"},
+    {task:"Confirm all vendor arrival times", priority:"high"},
+    {task:"Send final headcount to caterer", priority:"high"},
+    {task:"Confirm bus pickup times + church address with driver", priority:"high"},
+    {task:"Prepare gratuity envelopes for DJ, photographer, servers", priority:"medium"},
+  ]},
+  { phase:"Week Of", emoji:"💐", tasks:[
+    {task:"Tent + equipment delivered and set up at Gråbogården", priority:"high"},
+    {task:"Pick up / receive flowers — arrange all centerpieces", priority:"high"},
+    {task:"Confirm final bus schedule + pickup location with driver", priority:"high"},
+    {task:"Pack bridal bag: dress, shoes, accessories, vows, emergency kit", priority:"high"},
+    {task:"Place disposable cameras + seating cards on tables", priority:"medium"},
+    {task:"Hand gratuity envelopes to wedding planner or trusted person", priority:"medium"},
+    {task:"Charge all devices — photographer, DJ, personal phones", priority:"low"},
+  ]},
 ];
 
-const SHOPPING = {
-  'Friday BBQ Food (ICA)': ['Hotdogs 200 pcs','Burger patties 150 pcs','Hotdog buns 200 pcs','Burger buns 150 pcs','Bell peppers bulk','Zucchini bulk','Corn on the cob','Mushrooms','Coleslaw ready-made','Pasta salad ready-made','Green salad mix','Ketchup 3-4 bottles','Mustard 3-4 bottles','Mayonnaise 3-4 bottles','Relish 2 jars','Bread rolls bulk','Chips + dips','Paper plates 200+','Napkins bulk','Plastic utensils 200 sets','Plastic cups 300+','Aluminum foil 2 rolls','Trash bags 10+','Graham crackers 10 packs','Marshmallows 5 bags','Chocolate bars 10','Roasting sticks 50 pcs'],
-  'Friday BBQ Drinks (Systembolaget)': ['Beer 200 cans','Red wine 10-12 bottles','White wine 10-12 bottles','Aperol 6-8 bottles','Prosecco 15-20 bottles','Soda water 20 bottles','Soft drinks bulk','Sparkling water bulk','Still water bulk','Ice 10-15 kg bags','Lemon + lime garnish','Paper straws 200','Plastic wine glasses 200','Cooler bags 4-6'],
-  'Sat+Sun Breakfast (ICA)': ['Sliced bread 2-3 loaves','Knackebrod 2 packs','Croissants or kanelbullar 20 pcs','Eggs 24','Butter 2-3 packs','Cheese slices assorted','Ham / deli slices','Salami 1 pack','Yogurt 4-5 tubs','Granola 2 bags','Bananas 2 bunches','Apples 1 bag','Grapes 1 bunch','Jam strawberry + lingonberry','Orange juice 3-4 cartons','Coffee 2 packs','Tea bags 1-2 boxes','Milk + oat milk 3-4 liters','Sugar 1 bag','Paper plates small 50','Coffee cups 50','Napkins 1 pack'],
-  'Wedding Open Bar (Systembolaget)': ['Beer 300-350 cans','Red wine 20-25 bottles','White wine 20-25 bottles','Rose 5-8 bottles','Champagne toast 15-20 bottles','Aperol 4-6 bottles','Prosecco spritzes 10-12 bottles','Vodka 3-4 bottles','Gin 2-3 bottles','Whiskey 2-3 bottles','Tonic water bulk','Cola bulk','Lemon soda bulk','OJ mixer 4-6 cartons','Cranberry juice 3-4 cartons','Soda water bulk','Sparkling water bulk','Still water bulk','Ice 20-25 kg bags','Lemon + lime garnish','Mint 3-4 bunches','Cocktail napkins 500','Straws 500'],
-  'Firewood + Smores': ['Firewood birch or oak 80-100 kg','Kindling 2 packs','Fire starter sticks','Long matches or lighter','Fire poker tongs','Fire safety bucket','Graham crackers 10 packs','Marshmallows 5 bags','Chocolate bars 10-12','Roasting sticks 50 pcs','Picnic blankets 10-15'],
+const DAY_SCHEDULE = [
+  { day:"Friday — Night Before BBQ", emoji:"🌅", color:"#8a3030", events:[
+    {time:"4:00 PM", event:"Grilling staff arrives — fire setup, food prep begins"},
+    {time:"5:00 PM", event:"Guests arrive at picnic area"},
+    {time:"5:00–6:00 PM", event:"Welcome drinks — Aperol Spritzes, beer, wine"},
+    {time:"6:00–9:00 PM", event:"BBQ picnic — hotdogs, burgers, grilled veg + sides"},
+    {time:"7:00 PM", event:"Bonfire lights + s'mores station opens 🔥"},
+    {time:"9:00 PM+", event:"Music, drinks, relaxed evening"},
+  ]},
+  { day:"Saturday — Wedding Day", emoji:"💍", color:"#9b2335", events:[
+    {time:"9:00 AM", event:"Self-serve breakfast for 16 — knäckebröd, croissants, eggs, fruit, coffee"},
+    {time:"10:30 AM", event:"📸 Photographer arrives — getting-ready shots: Liz + bridesmaids"},
+    {time:"11:00 AM", event:"Liz + bridesmaids hair & makeup begins (2–3 stylists)"},
+    {time:"12:00 PM", event:"📸 Photographer captures Ryan + groomsmen getting ready"},
+    {time:"12:30 PM", event:"📸 First look (optional) — private moment + portraits"},
+    {time:"1:30 PM", event:"📸 Bridal party portraits + family formals before buses depart"},
+    {time:"2:00 PM", event:"Buses depart to church — 100 guests"},
+    {time:"3:00 PM", event:"⛪ Ceremony begins — 📸 full coverage"},
+    {time:"3:45 PM", event:"Rice throw exit! 📸 Key shot 🌾"},
+    {time:"4:00 PM", event:"Buses depart church → Gråbogården (~30 min)"},
+    {time:"4:30 PM", event:"Arrival — cocktail hour · 📸 candid guest + couple shots"},
+    {time:"5:00 PM", event:"📸 Golden hour portraits around Gråbogården grounds"},
+    {time:"5:30 PM", event:"Open bar opens (5–6 hours)"},
+    {time:"6:00 PM", event:"Buffet dinner — catering staff serve · 📸 table details"},
+    {time:"8:00 PM", event:"Speeches + first dance 💃 · 📸 full coverage"},
+    {time:"9:00 PM", event:"DJ set — dancing begins 🎶 · 📸 dance floor candids"},
+    {time:"10:30 PM", event:"Liz changes into reception dress · 📸 dress-change portraits"},
+    {time:"11:00 PM", event:"📸 Photographer wraps (~8–10 hrs total) · Party continues!"},
+  ]},
+  { day:"Sunday — Morning After", emoji:"☀️", color:"#4a7a50", events:[
+    {time:"9:00 AM", event:"Self-serve breakfast for overnight guests"},
+    {time:"10:00 AM", event:"Relaxed morning — coffee, pastries, recap the night 💛"},
+    {time:"11:00 AM", event:"Checkout + goodbyes"},
+  ]},
+];
+
+const SHOPPING_LISTS = [
+  { key:"fri_food", title:"🛒 Friday Night BBQ — Food", store:"ICA Maxi", storeColor:"#e05a2a", budget:"$1,500–$2,000",
+    items:[
+      {name:"Hotdogs",qty:"200 pcs",price:"$78–$116"},
+      {name:"Burger patties",qty:"150 pcs",price:"$243–$340"},
+      {name:"Hotdog buns",qty:"200 pcs",price:"$58–$78"},
+      {name:"Burger buns",qty:"150 pcs",price:"$58–$87"},
+      {name:"Bell peppers",qty:"Bulk",price:""},
+      {name:"Zucchini",qty:"Bulk",price:""},
+      {name:"Corn on the cob",qty:"Bulk",price:""},
+      {name:"Mushrooms",qty:"Bulk",price:""},
+      {name:"Coleslaw (ready-made)",qty:"Bulk",price:""},
+      {name:"Pasta salad (ready-made)",qty:"Bulk",price:""},
+      {name:"Green salad mix",qty:"Bulk",price:""},
+      {name:"Ketchup",qty:"3–4 large bottles",price:""},
+      {name:"Mustard",qty:"3–4 large bottles",price:""},
+      {name:"Mayonnaise",qty:"3–4 large bottles",price:""},
+      {name:"Relish",qty:"2 jars",price:""},
+      {name:"Extra bread rolls",qty:"Bulk",price:""},
+      {name:"Chips + dips",qty:"Bulk",price:""},
+      {name:"Paper plates",qty:"200+",price:""},
+      {name:"Napkins",qty:"Bulk pack",price:""},
+      {name:"Plastic utensils (fork+knife)",qty:"200 sets",price:""},
+      {name:"Plastic cups",qty:"300+",price:""},
+      {name:"Aluminum foil (for grilling)",qty:"2 rolls",price:""},
+      {name:"Trash bags (large)",qty:"10+",price:""},
+      {name:"Hand sanitizer",qty:"2–3 bottles",price:""},
+      {name:"Graham crackers (s'mores)",qty:"10 packs",price:""},
+      {name:"Marshmallows",qty:"5 large bags",price:""},
+      {name:"Chocolate bars (s'mores)",qty:"10 bars",price:""},
+      {name:"Roasting sticks / skewers",qty:"50 pcs",price:""},
+    ]
+  },
+  { key:"fri_drinks", title:"🍷 Friday Night BBQ — Drinks", store:"Systembolaget", storeColor:"#006b3c", budget:"$2,000",
+    items:[
+      {name:"Beer (lager/IPA mix)",qty:"200 cans/bottles",price:"$194–$291"},
+      {name:"Red wine",qty:"10–12 bottles",price:""},
+      {name:"White wine",qty:"10–12 bottles",price:""},
+      {name:"Aperol",qty:"6–8 bottles",price:"$116–$155"},
+      {name:"Prosecco (for spritzes)",qty:"15–20 bottles",price:"$194–$291"},
+      {name:"Soda water (for spritzes)",qty:"20 large bottles",price:"$29–$49"},
+      {name:"Soft drinks (cola, lemon, orange)",qty:"Bulk 24-pack",price:""},
+      {name:"Sparkling water",qty:"Bulk",price:""},
+      {name:"Still water",qty:"Bulk",price:""},
+      {name:"Ice",qty:"10–15 kg bags",price:""},
+      {name:"Lemon + lime (garnish)",qty:"5–6 each",price:""},
+      {name:"Paper straws",qty:"200",price:""},
+      {name:"Plastic wine glasses",qty:"200",price:""},
+      {name:"Cooler bags / ice buckets",qty:"4–6",price:""},
+    ]
+  },
+  { key:"breakfast", title:"☀️ Sat + Sun Breakfast — 16 People", store:"ICA", storeColor:"#e05a2a", budget:"$500",
+    items:[
+      {name:"Sliced bread (white + wholegrain)",qty:"2–3 loaves",price:"$8–$12"},
+      {name:"Knäckebröd (crispbread)",qty:"2 packs",price:"$6–$9"},
+      {name:"Croissants or kanelbullar",qty:"20–24 pcs",price:"$15–$25"},
+      {name:"Eggs",qty:"24 eggs",price:"$8–$12"},
+      {name:"Butter",qty:"2–3 packs",price:"$6–$10"},
+      {name:"Cheese slices (assorted)",qty:"2–3 bulk packs",price:"$12–$18"},
+      {name:"Ham / deli slices",qty:"2 bulk packs",price:"$12–$18"},
+      {name:"Salami",qty:"1 pack",price:"$5–$8"},
+      {name:"Yogurt (plain + flavored)",qty:"4–5 large tubs",price:"$10–$16"},
+      {name:"Granola",qty:"2 bags",price:"$7–$12"},
+      {name:"Bananas",qty:"2 bunches",price:"$4–$6"},
+      {name:"Apples",qty:"1 bag",price:"$4–$6"},
+      {name:"Grapes",qty:"1 large bunch",price:"$5–$8"},
+      {name:"Jam (strawberry + lingonberry)",qty:"2 jars",price:"$5–$8"},
+      {name:"Orange juice",qty:"3–4 large cartons",price:"$8–$12"},
+      {name:"Coffee (ground or pads)",qty:"2 packs",price:"$8–$12"},
+      {name:"Assorted tea bags",qty:"1–2 boxes",price:"$4–$6"},
+      {name:"Milk + oat milk",qty:"3–4 liters",price:"$6–$9"},
+      {name:"Sugar",qty:"1 bag",price:"$2–$3"},
+      {name:"Paper plates (small)",qty:"50",price:"$3–$5"},
+      {name:"Coffee cups (disposable)",qty:"50",price:"$3–$5"},
+      {name:"Napkins",qty:"1 pack",price:"$2–$3"},
+    ]
+  },
+  { key:"wed_drinks", title:"🍾 Wedding Open Bar (100 guests, 5–6 hrs)", store:"Systembolaget", storeColor:"#006b3c", budget:"$5,000",
+    items:[
+      {name:"Beer (lager, craft, mix)",qty:"300–350 cans/bottles",price:"$291–$388"},
+      {name:"Red wine",qty:"20–25 bottles",price:""},
+      {name:"White wine",qty:"20–25 bottles",price:""},
+      {name:"Rosé",qty:"5–8 bottles",price:""},
+      {name:"Champagne / Prosecco (toast)",qty:"15–20 bottles",price:"$194–$340"},
+      {name:"Aperol",qty:"4–6 bottles",price:"$78–$116"},
+      {name:"Prosecco (for spritzes)",qty:"10–12 bottles",price:""},
+      {name:"Vodka",qty:"3–4 bottles",price:""},
+      {name:"Gin",qty:"2–3 bottles",price:""},
+      {name:"Whiskey / Bourbon",qty:"2–3 bottles",price:""},
+      {name:"Tonic water (for G&T)",qty:"Bulk — 24 cans",price:""},
+      {name:"Cola",qty:"Bulk 24-pack",price:""},
+      {name:"Lemon soda",qty:"Bulk",price:""},
+      {name:"Orange juice (mixer)",qty:"4–6 cartons",price:""},
+      {name:"Cranberry juice (mixer)",qty:"3–4 cartons",price:""},
+      {name:"Soda water",qty:"Bulk — 24 large bottles",price:""},
+      {name:"Sparkling water",qty:"Bulk",price:""},
+      {name:"Still water (table water)",qty:"Bulk",price:""},
+      {name:"Ice",qty:"20–25 kg bags",price:"$49–$78"},
+      {name:"Lemon + lime (garnish)",qty:"10+ each",price:""},
+      {name:"Mint (for cocktails)",qty:"3–4 bunches",price:""},
+      {name:"Cocktail napkins",qty:"500",price:""},
+      {name:"Paper straws",qty:"500",price:""},
+      {name:"Wine glasses (if not from rental)",qty:"150",price:""},
+      {name:"Champagne flutes (toast)",qty:"100",price:""},
+      {name:"Highball glasses",qty:"150",price:""},
+      {name:"Beer openers / corkscrews",qty:"4–6",price:""},
+    ]
+  },
+  { key:"fire", title:"🔥 Firewood, Fire & S'mores", store:"Byggmax / local wood supplier", storeColor:"#8a4a1a", budget:"$1,000",
+    items:[
+      {name:"Firewood (birch or oak hardwood)",qty:"3–4 large bundles (~80–100 kg)",price:"$80–$150"},
+      {name:"Kindling / fire starter sticks",qty:"2 packs",price:"$8–$15"},
+      {name:"Newspaper (for lighting)",qty:"A few sheets",price:"Free"},
+      {name:"Long matches or lighter",qty:"2–3",price:"$5–$10"},
+      {name:"Fire poker / tongs",qty:"1–2",price:"$15–$30"},
+      {name:"Fire pit (if venue doesn't have one)",qty:"1",price:"$50–$150"},
+      {name:"Fire safety bucket (water)",qty:"1–2",price:"Free"},
+      {name:"Graham crackers",qty:"10 packs",price:"$15–$25"},
+      {name:"Marshmallows (large)",qty:"5 large bags",price:"$10–$18"},
+      {name:"Chocolate bars (milk chocolate)",qty:"10–12 bars",price:"$12–$20"},
+      {name:"Roasting sticks / metal skewers",qty:"50 pcs",price:"$10–$20"},
+      {name:"Small plates / napkins for s'mores",qty:"100",price:"$5–$10"},
+      {name:"Picnic blankets",qty:"10–15",price:"$100–$200"},
+    ]
+  },
+];
+
+// ─── STATE ───────────────────────────────────────────────────────────────────
+let state = {
+  tab: "overview",
+  syncStatus: "idle",
+  lastSaved: null,
+  checkedTasks: {},
+  checkedSweden: {},
+  checkedShop: {},
+  shopCustom: { fri_food:[], fri_drinks:[], breakfast:[], wed_drinks:[], fire:[] },
+  actualCosts: {},
+  extraItems: [],
+  extraActual: {},
+  customSchedule: null,
+  // editable lists — null means use defaults
+  customBudget: null,
+  customTimeline: null,
+  customSweden: null,
+  customShoppingLists: null,
+  customNBCosts: null,
+  customNBFood: null,
+  customNBDrinks: null,
+  customPacking: null,
+  // edit modes
+  budgetEditMode: false,
+  timelineEditMode: false,
+  swedenEditMode: false,
+  shoppingEditMode: false,
+  nbEditMode: false,
+  packingEditMode: false,
+  // inline editing state (not persisted)
+  newShopItem: { fri_food:"", fri_drinks:"", breakfast:"", wed_drinks:"", fire:"" },
+  newExtra: { item:"", budget:"", status:"ok" },
+  scheduleEditMode: false,
 };
 
-const SWEDEN = [
-  {cat:'Venue - Grabogarden',items:['Walk full property - tent location ceremony spot bus parking','Confirm whats included: chairs linens tables kitchen bedding','Confirm: delivery access vendor arrival windows noise curfew','Taste food + review buffet menu options','Confirm overnight sleeping for 16 breakfast guests','Photograph space at same time of day as ceremony']},
-  {cat:'Church + Ceremony',items:['Meet with priest - confirm 2027 date','Understand requirements: meetings documents needed','Walk church exterior - plan rice throw exit + photos','Ask about church music: organ available?','Drive church to Grabogarden bus route yourself']},
-  {cat:'DJ + Entertainment',items:['Meet 2-3 local DJs - hear samples discuss music vibe','Confirm DJ equipment: do they bring speakers?','Discuss full flow: cocktail hour dinner dancing']},
-  {cat:'Photographer',items:['Meet 2-3 Gothenburg photographers - review full galleries','Discuss coverage: ceremony cocktail reception getting-ready','Do a test shoot together at Grabogarden','Confirm contract deposit and delivery timeline']},
-  {cat:'Flowers + Decor',items:['Visit Goteborgs Saluhall or local flower market','Meet 1-2 florists for quote on ceremony arch + tables','Confirm flower season for wedding month']},
-  {cat:'Hair + Beauty',items:['Book bridal hair trial at Gothenburg salon ($150-$250)','Book salon for wedding morning: Liz + 5 bridesmaids','Confirm timing so everyone is ready by 2:00 PM']},
-  {cat:'Wedding Planner',items:['Meet 2-3 wedding planners in Gothenburg','Review vendor relationships - can they get better rates?','Confirm they coordinate comfortably in English']},
-  {cat:'Logistics',items:['Confirm bridal suite getting-ready space at Grabogarden','Visit Systembolaget - ask about bulk pre-orders','Visit ICA Maxi near Grabo - confirm shopping list','Confirm outdoor space for Friday BBQ fire pit','Enjoy Gothenburg together - celebrate your wedding city!']},
-];
+// Helpers to get active lists (custom if set, else defaults)
+function getBudget()   { return state.customBudget   || BUDGET_LINES.map(r=>({...r})); }
+function getTimeline() { return state.customTimeline || TIMELINE.map(p=>({...p, tasks:[...p.tasks.map(t=>({...t}))]}) ); }
+function getSweden()   { return state.customSweden   || SWEDEN_TRIP.map(c=>({...c, tasks:[...c.tasks.map(t=>({...t}))]}) ); }
+function getShoppingLists() { return state.customShoppingLists || SHOPPING_LISTS.map(l=>({...l, items:[...l.items.map(i=>({...i}))]}) ); }
 
-const SCHEDULE = [
-  {day:'Friday - Night Before BBQ',color:'#7a6e5f',events:[['4:00 PM','Grilling staff arrives - fire setup food prep'],['5:00 PM','Guests arrive at picnic area'],['5:00-6:00 PM','Welcome drinks - Aperol Spritzes beer wine'],['6:00-9:00 PM','BBQ picnic - hotdogs burgers grilled veg + sides'],['7:00 PM','Bonfire + smores station opens'],['9:00 PM+','Music drinks relaxed evening']]},
-  {day:'Saturday - Wedding Day',color:'#b5855a',events:[['9:00 AM','Self-serve breakfast for 16'],['10:30 AM','Photographer arrives - getting-ready shots Liz + bridesmaids'],['11:00 AM','Liz + bridesmaids hair + makeup begins'],['12:00 PM','Photographer captures Ryan + groomsmen'],['1:30 PM','Bridal party portraits + family formals'],['2:00 PM','Buses depart to church - 100 guests'],['3:00 PM','Ceremony begins - full photo coverage'],['3:45 PM','Rice throw exit!'],['4:00 PM','Buses depart church to Grabogarden'],['4:30 PM','Arrival - cocktail hour candid shots'],['5:00 PM','Golden hour portraits at Grabogarden'],['5:30 PM','Open bar opens (5-6 hours)'],['6:00 PM','Buffet dinner served'],['8:00 PM','Speeches + first dance'],['9:00 PM','DJ set - dancing begins'],['10:30 PM','Liz changes into reception dress'],['11:00 PM','Photographer wraps - party continues!']]},
-  {day:'Sunday - Morning After',color:'#6b8a70',events:[['9:00 AM','Self-serve breakfast for overnight guests'],['10:00 AM','Relaxed morning - coffee pastries'],['11:00 AM','Checkout + goodbyes']]},
-];
+// ─── SYNC ────────────────────────────────────────────────────────────────────
+const SYNC_KEY = "liz-ryan-wedding-2027";
+let saveTimer = null;
 
-const TABS = ['budget','schedule','shopping','sweden','todo'];
-const TLABELS = ['Budget','Schedule','Shopping','Sweden Trip','To-Do'];
-
-function render(){
-  // tabs
-  document.getElementById('tabs').innerHTML = TABS.map((t,i)=>`<button class="tab${tab===t?' on':''}" onclick="setTab('${t}')">${TLABELS[i]}</button>`).join('');
-  
-  // update header stats
-  const totalActual = BUDGET.reduce((s,r)=>s+(parseFloat(S.actual[r.item])||0),0) + S.extra.reduce((s,r,i)=>s+(parseFloat(r.actual)||0),0);
-  const taskDone = Object.values(S.tasks).filter(Boolean).length;
-  const taskTotal = TIMELINE.reduce((s,p)=>s+p.tasks.length,0);
-  document.getElementById('actualVal').textContent = totalActual===0?'$0 spent':'$'+Math.round(totalActual).toLocaleString()+' spent';
-  document.getElementById('actualVal').style.color = totalActual===0?'#888':totalActual>39000?'#e07070':'#7aaa7a';
-  document.getElementById('taskVal').textContent = taskDone+'/'+taskTotal;
-  
-  if(tab==='budget') renderBudget();
-  else if(tab==='schedule') renderSchedule();
-  else if(tab==='shopping') renderShopping();
-  else if(tab==='sweden') renderSweden();
-  else if(tab==='todo') renderTodo();
+async function loadFromCloud() {
+  try {
+    const result = await window.storage.get(SYNC_KEY, true);
+    if (result && result.value) {
+      const saved = JSON.parse(result.value);
+      state.checkedTasks        = saved.checkedTasks        || {};
+      state.checkedSweden       = saved.checkedSweden       || {};
+      state.checkedShop         = saved.checkedShop         || {};
+      state.shopCustom          = saved.shopCustom          || { fri_food:[], fri_drinks:[], breakfast:[], wed_drinks:[], fire:[] };
+      state.actualCosts         = saved.actualCosts         || {};
+      state.extraItems          = saved.extraItems          || [];
+      state.extraActual         = saved.extraActual         || {};
+      state.customSchedule      = saved.customSchedule      || null;
+      state.customBudget        = saved.customBudget        || null;
+      state.customTimeline      = saved.customTimeline      || null;
+      state.customSweden        = saved.customSweden        || null;
+      state.customShoppingLists = saved.customShoppingLists || null;
+      state.lastSaved           = saved.savedAt             || null;
+    }
+    state.syncStatus = "synced";
+  } catch(e) {
+    state.syncStatus = "synced";
+  }
+  render();
+  return true;
 }
 
-function setTab(t){ tab=t; render(); window.scrollTo(0,0); }
+async function saveToCloud() {
+  state.syncStatus = "syncing";
+  renderSyncBadge();
+  try {
+    const payload = {
+      checkedTasks:        state.checkedTasks,
+      checkedSweden:       state.checkedSweden,
+      checkedShop:         state.checkedShop,
+      shopCustom:          state.shopCustom,
+      actualCosts:         state.actualCosts,
+      extraItems:          state.extraItems,
+      extraActual:         state.extraActual,
+      customSchedule:      state.customSchedule  || null,
+      customBudget:        state.customBudget     || null,
+      customTimeline:      state.customTimeline   || null,
+      customSweden:        state.customSweden     || null,
+      customShoppingLists: state.customShoppingLists || null,
+      customNBCosts:       state.customNBCosts    || null,
+      customNBFood:        state.customNBFood     || null,
+      customNBDrinks:      state.customNBDrinks   || null,
+      savedAt:             new Date().toISOString(),
+    };
+    await window.storage.set(SYNC_KEY, JSON.stringify(payload), true);
+    state.syncStatus = "synced";
+    state.lastSaved = payload.savedAt;
+  } catch(e) {
+    state.syncStatus = "error";
+  }
+  renderSyncBadge();
+}
 
-function renderBudget(){
-  const totalActual = BUDGET.reduce((s,r)=>s+(parseFloat(S.actual[r.item])||0),0) + S.extra.reduce((s,r)=>s+(parseFloat(r.actual)||0),0);
-  const totalBudget = 39000 + S.extra.reduce((s,r)=>s+r.budget,0);
+function scheduleSave() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => saveToCloud(), 800);
+}
+
+// ─── HELPERS ─────────────────────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const fmt = n => n===0?"—":"$"+Math.round(n).toLocaleString();
+const fmtBudget = n => n===0?"—":"$"+n.toLocaleString();
+const dotClass = s => s==="ok"?"dot dot-ok":s==="warning"?"dot dot-warn":"dot dot-note";
+const dotIcon  = s => s==="ok"?"✓":s==="warning"?"⚠":"ℹ";
+const pillClass = p => p==="high"?"pill pill-high":p==="medium"?"pill pill-med":"pill pill-low";
+
+function renderSyncBadge() {
+  const el = $("sync-badge");
+  if (!el) return;
+  if (state.syncStatus==="syncing") {
+    el.innerHTML = `<span style="width:7px;height:7px;border-radius:50%;background:#f0c060;display:inline-block"></span> Saving...`;
+  } else if (state.syncStatus==="error") {
+    el.innerHTML = `<span style="width:7px;height:7px;border-radius:50%;background:#e07070;display:inline-block"></span> Sync error`;
+  } else {
+    const t = state.lastSaved ? new Date(state.lastSaved).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}) : "never";
+    el.innerHTML = `<span class="sync-dot"></span> Synced across all devices · Last saved ${t}`;
+  }
+}
+
+// ─── RENDER ──────────────────────────────────────────────────────────────────
+function render() {
+  const app = document.getElementById("app");
+  app.innerHTML = buildApp();
+  attachEvents();
+  renderSyncBadge();
+}
+
+// Attach a live-updating input handler that writes directly to state and saves
+// WITHOUT triggering a re-render — so typing is never interrupted
+function liveInput(selector, getTarget) {
+  document.querySelectorAll(selector).forEach(inp => {
+    inp.addEventListener("input", () => {
+      getTarget(inp, inp.value);
+      scheduleSave();
+    });
+  });
+}
+
+
+
+function buildApp() {
+  const tabs = [
+    {id:"overview",    label:"💍 Budget"},
+    {id:"sweden",      label:"✈️ Sweden"},
+    {id:"nightbefore", label:"🔥 Night Before"},
+    {id:"dayof",       label:"⛪ Wedding Day"},
+    {id:"shopping",    label:"🛒 Shopping"},
+    {id:"packing",     label:"🧳 Pack from USA"},
+    {id:"extras",      label:"➕ Add Items"},
+    {id:"checklist",   label:"✅ To-Do"},
+  ];
+
+  const totalActual = BUDGET_LINES.reduce((s,r)=>s+(parseFloat(state.actualCosts[r.item])||0),0)
+                    + state.extraItems.reduce((s,r,i)=>s+(parseFloat(state.extraActual[i])||0),0);
+  const totalBudget = YOUR_TOTAL + state.extraItems.reduce((s,r)=>s+r.budget,0);
+  const taskTotal   = TIMELINE.reduce((s,p)=>s+p.tasks.length,0);
+  const taskDone    = Object.values(state.checkedTasks).filter(Boolean).length;
+
+  return `
+    <div class="header">
+      <div class="header-bg"></div>
+      <div class="header-inner">
+        <p style="color:#d4a090;font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:5px">Wedding Planner</p>
+        <h1>Liz <span style="color:#9b2335">&</span> Ryan</h1>
+        <p>Gråbogården, Gothenburg — 2027</p>
+        <div class="header-stats">
+          <div class="stat"><div class="stat-val">${fmtBudget(totalBudget)}</div><div class="stat-lbl">Budget</div></div>
+          <div class="stat"><div class="stat-val" style="color:${totalActual===0?"#666":totalActual>totalBudget?"#e07070":"#7aaa7a"}">${totalActual===0?"$0 spent":fmt(totalActual)+" spent"}</div><div class="stat-lbl">Actual</div></div>
+          <div class="stat"><div class="stat-val">100</div><div class="stat-lbl">Guests</div></div>
+          <div class="stat"><div class="stat-val">${taskDone}/${taskTotal}</div><div class="stat-lbl">Tasks Done</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="budget-note">💡 <strong>Why $39,000?</strong> That's the sum of every dollar you wrote down. Several items are $0 or underbudgeted — the realistic range is $${REALISTIC_LOW.toLocaleString()}–$${REALISTIC_HIGH.toLocaleString()}. Add a $3,000–$5,000 buffer.</div>
+    <nav class="nav-wrap">${tabs.map(t=>`<button class="nav-btn${state.tab===t.id?" act":""}" data-tab="${t.id}">${t.label}</button>`).join("")}</nav>
+    <div class="content">
+      <div id="sync-badge" class="sync-badge">⏳ Loading...</div>
+      ${buildTab()}
+    </div>
+  `;
+}
+
+function buildTab() {
+  switch(state.tab) {
+    case "overview":    return buildBudgetTab();
+    case "sweden":      return buildSwedenTab();
+    case "nightbefore": return buildNightBeforeTab();
+    case "dayof":       return buildDayOfTab();
+    case "shopping":    return buildShoppingTab();
+    case "packing":     return buildPackingTab();
+    case "extras":      return buildExtrasTab();
+    case "checklist":   return buildChecklistTab();
+    default: return "";
+  }
+}
+
+// ── BUDGET TAB ────────────────────────────────────────────────────────────────
+function buildBudgetTab() {
+  if (!state.customBudget) state.customBudget = BUDGET_LINES.map(r=>({...r}));
+  const budget = state.customBudget;
+  const em = state.budgetEditMode;
+  const totalActual = budget.reduce((s,r)=>s+(parseFloat(state.actualCosts[r.item])||0),0)
+                    + state.extraItems.reduce((s,r,i)=>s+(parseFloat(state.extraActual[i])||0),0);
+  const totalBudget = budget.reduce((s,r)=>s+r.budget,0) + state.extraItems.reduce((s,r)=>s+r.budget,0);
   const diff = totalActual - totalBudget;
-  
-  let html = '<h2>Full Budget</h2><p style="margin-bottom:16px">Type what you actually paid in the green column</p>';
-  html += '<div class="card">';
-  html += '<div class="budget-row" style="font-size:10px;font-weight:700;text-transform:uppercase;color:#7a6355;background:#f5ede0;padding:8px;border-radius:4px 4px 0 0"><span>Item</span><span style="text-align:right">Budgeted</span><span style="text-align:right;color:#5a8a60">Actual $</span></div>';
-  BUDGET.forEach(r=>{
-    const a = S.actual[r.item]||'';
-    html += `<div class="budget-row"><span>${r.item}</span><span style="text-align:right;font-weight:700;color:${r.budget===0?'#bbb':'#b5855a'}">${r.budget===0?'FREE':'$'+r.budget.toLocaleString()}</span><span><input class="actual" type="text" inputmode="decimal" placeholder="0" value="${a}" onchange="S.actual['${r.item}']=this.value.replace(/[^0-9.]/g,'');save();render()"/></span></div>`;
-  });
-  // Extra items
-  S.extra.forEach((r,i)=>{
-    html += `<div class="budget-row"><span>${r.item} <button onclick="S.extra.splice(${i},1);save();render()" style="background:none;border:none;color:#e07070;cursor:pointer;font-size:13px">×</button></span><span style="text-align:right;font-weight:700;color:#b5855a">$${r.budget.toLocaleString()}</span><span><input class="actual" type="text" inputmode="decimal" placeholder="0" value="${r.actual||''}" onchange="S.extra[${i}].actual=this.value;save();render()"/></span></div>`;
-  });
-  html += `<div class="budget-row" style="background:#3d2e1e;padding:10px;border-radius:0 0 4px 4px"><span style="font-weight:700;color:#d4b896;font-size:11px;text-transform:uppercase">TOTAL</span><span style="text-align:right;font-weight:700;color:#b5855a;font-size:15px">$${totalBudget.toLocaleString()}</span><span style="text-align:right;font-weight:700;color:${totalActual===0?'#666':diff>0?'#e07070':'#7aaa7a'};font-size:14px">${totalActual===0?'—':'$'+Math.round(totalActual).toLocaleString()}</span></div>`;
-  html += '</div>';
-  
-  // Add extra item
-  html += `<div class="card"><div style="font-weight:700;margin-bottom:10px;font-size:14px">+ Add Custom Budget Item</div><div class="add"><input id="ei" placeholder="Item name" style="flex:2"/><input id="eb" placeholder="$0" style="width:70px;flex:none"/><button onclick="addExtra()">Add</button></div></div>`;
-  
-  document.getElementById('content').innerHTML = html;
+
+  const rows = budget.map((row,idx) => {
+    const actual = state.actualCosts[row.item]||"";
+    if (em) return `
+      <div class="tbl-row edit-row" draggable="true" data-bidx="${idx}" style="grid-template-columns:22px 22px 1fr 90px 28px;gap:6px;cursor:grab;background:white">
+        <span style="color:#ccc;font-size:15px;cursor:grab;user-select:none">☰</span>
+        <span class="${dotClass(row.status)}" data-cycleb="${idx}" style="cursor:pointer" title="Tap to change status">${dotIcon(row.status)}</span>
+        <input value="${row.item.replace(/"/g,"&quot;").replace(/'/g,"&#39;")}" data-bedit-item="${idx}" style="border:1px solid #e0d0c0;border-radius:4px;padding:5px 7px;font-size:12px;width:100%;outline:none;background:#faf5f0"/>
+        <div style="position:relative;display:flex;align-items:center"><span style="position:absolute;left:6px;font-size:11px;color:#9b2335;font-weight:700;pointer-events:none">$</span><input type="text" inputmode="decimal" value="${row.budget||""}" data-bedit-amt="${idx}" placeholder="0" style="width:100%;padding:5px 5px 5px 16px;border:1px solid #e0d0c0;border-radius:4px;font-size:12px;outline:none;background:#faf5f0;text-align:right"/></div>
+        <button data-bdel="${idx}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:17px;padding:0;line-height:1">×</button>
+      </div>`;
+    return `
+      <div class="tbl-row" style="grid-template-columns:20px 1fr 72px 96px 90px;gap:8px">
+        <span class="${dotClass(row.status)}">${dotIcon(row.status)}</span>
+        <div style="font-size:12px;font-weight:600;line-height:1.4">${row.item}</div>
+        <div style="text-align:right;font-size:13px;font-weight:700;color:${row.budget===0?"#bbb":"#9b2335"}">${fmtBudget(row.budget)}</div>
+        <div style="text-align:right;font-size:11px;color:#6a3a2a">${row.low===0&&row.high===0?"FREE":"$"+row.low.toLocaleString()+"–$"+row.high.toLocaleString()}</div>
+        <div style="display:flex;justify-content:flex-end"><div class="actual-wrap"><span class="actual-prefix">$</span>
+          <input class="actual-inp" type="text" inputmode="decimal" placeholder="0" value="${actual}" data-actual="${row.item.replace(/"/g,"&quot;")}" style="width:78px"/>
+        </div></div>
+      </div>
+      <div style="padding:0 13px 8px;font-size:11px;color:#7a3a2a;border-bottom:1px solid #f0e4d4">${row.notes}</div>`;
+  }).join("");
+
+  const overUnder = totalActual===0?"—": diff>0?`<span class="over">▲ $${Math.round(diff).toLocaleString()} over</span>`:`<span class="under">▼ $${Math.round(Math.abs(diff)).toLocaleString()} under</span>`;
+
+  const editBar = em ? `
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button id="bdone" style="background:#6b8a70;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+      <button id="breset" style="background:none;border:1px solid #c17f3e;color:#c17f3e;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset</button>
+    </div>
+    <p class="section-sub" style="margin-bottom:12px">Drag ☰ to reorder · Edit name/amount · Tap status dot to cycle · × to delete</p>` :
+    `<button id="bedit" style="background:none;border:1px solid #9b2335;color:#9b2335;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit Budget Items</button>`;
+
+  const addRow = em ? `<div style="padding:10px 13px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <span style="font-size:18px;color:#9b2335">+</span>
+    <input id="bnew-name" placeholder="New item name" style="flex:2;min-width:120px;border:1px solid #d4c4b0;border-radius:4px;padding:7px 9px;font-size:12px;outline:none;background:white"/>
+    <div style="position:relative;display:inline-flex;align-items:center"><span style="position:absolute;left:7px;font-size:11px;color:#9b2335;font-weight:700;pointer-events:none">$</span><input id="bnew-amt" type="text" inputmode="decimal" placeholder="0" style="width:80px;padding:7px 6px 7px 18px;border:1px solid #d4c4b0;border-radius:4px;font-size:12px;outline:none;background:white;text-align:right"/></div>
+    <button id="bnew-add" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer">Add</button>
+  </div>` : "";
+
+  const groups = [
+    {label:"🍽️ Food & Catering",color:"#9b2335"},
+    {label:"🍷 Drinks",color:"#7a9ab5"},
+    {label:"🏡 Venue & Logistics",color:"#8a3030"},
+    {label:"👥 People & Service",color:"#4a7a50"},
+    {label:"💍 Bridal & Personal",color:"#8a2040"},
+    {label:"💐 Flowers & Decor",color:"#8a7b3a"},
+    {label:"✉️ Stationery & Extras",color:"#6b6b8a"},
+  ];
+
+  return `
+    <h2 class="section-title">Full Budget</h2>
+    <p class="section-sub" style="margin-bottom:12px">${em?"Editing mode — changes save automatically":"Type what you actually paid in the green column — totals update live."}</p>
+    ${editBar}
+    <div style="display:flex;gap:12px;margin-bottom:12px;font-size:12px;flex-wrap:wrap">
+      ${[["ok","✓","On Track"],["warning","⚠","Revisit"],["note","ℹ","Note"]].map(([s,i,l])=>`<div style="display:flex;align-items:center;gap:5px"><span class="${dotClass(s)}">${i}</span><span style="color:#7a3a2a">${l}</span></div>`).join("")}
+      ${!em?`<span style="margin-left:auto;font-size:11px;color:#5a8a60;font-weight:700">🟢 Actual $ is editable</span>`:""}
+    </div>
+    <div class="card">
+      <div class="tbl-head" style="grid-template-columns:${em?"22px 22px 1fr 90px 28px":"20px 1fr 72px 96px 90px"};gap:8px">
+        <div></div><div></div><div>Item</div>
+        <div style="text-align:right">${em?"Budgeted":"Budgeted"}</div>
+        ${em?`<div></div>`:`<div style="text-align:right">Est. Range</div><div style="text-align:right;color:#5a8a60">Actual $</div>`}
+      </div>
+      <div class="scr" id="blist">${rows}</div>
+      ${addRow}
+      <div style="display:grid;grid-template-columns:${em?"22px 22px 1fr 90px 28px":"20px 1fr 72px 96px 90px"};gap:8px;padding:12px 13px;background:#6a1010">
+        <div></div><div></div>
+        <div style="font-size:11px;font-weight:700;color:#d4a090;text-transform:uppercase;letter-spacing:.05em">TOTAL</div>
+        <div style="text-align:right;font-size:15px;font-weight:700;color:#9b2335">$${totalBudget.toLocaleString()}</div>
+        ${em?`<div></div>`:`<div style="text-align:right;font-size:11px;font-weight:700;color:#e08060">$${REALISTIC_LOW.toLocaleString()}–$${REALISTIC_HIGH.toLocaleString()}</div>
+        <div style="text-align:right"><div style="font-size:15px;font-weight:700;color:${totalActual===0?"#666":diff>0?"#e07070":"#7aaa7a"}">${totalActual===0?"—":fmt(totalActual)}</div><div style="font-size:10px;margin-top:1px">${overUnder}</div></div>`}
+      </div>
+    </div>
+
+    <div style="background:#6a1010;border-radius:8px;padding:16px 18px;margin-top:16px">
+      <div style="font-family:'Playfair Display',serif;color:#d4a090;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">Grand Summary</div>
+      <div class="summary-grid">
+        ${[
+          ["Budgeted","$"+totalBudget.toLocaleString(),"Your planned spend","#9b2335"],
+          ["Realistic Low","$"+REALISTIC_LOW.toLocaleString(),"Conservative","#6b9a70"],
+          ["Realistic High","$"+REALISTIC_HIGH.toLocaleString(),"Fully loaded","#c17f3e"],
+          ["Actual Spent",totalActual===0?"$0":fmt(totalActual),totalActual===0?"Enter actuals above":diff>0?"▲ $"+Math.round(diff).toLocaleString()+" over":"▼ $"+Math.round(Math.abs(diff)).toLocaleString()+" under",totalActual===0?"#666":diff>0?"#e07070":"#7aaa7a"],
+        ].map(([l,v,s,c])=>`<div class="summary-card"><div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:${c};margin-bottom:3px">${v}</div><div style="font-size:10px;color:#d4a090;text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px">${l}</div><div style="font-size:10px;color:#8a5a4a">${s}</div></div>`).join("")}
+      </div>
+      <div style="margin-top:12px;padding:9px 12px;background:rgba(193,127,62,.2);border-radius:6px;font-size:12px;color:#e8c898;text-align:center">
+        ⚠️ Recommended: <strong>$${(REALISTIC_HIGH+4000).toLocaleString()}</strong> — realistic high + $4,000 buffer
+      </div>
+    </div>
+  `;
 }
 
-function addExtra(){
-  const name = document.getElementById('ei').value.trim();
-  const budget = parseFloat(document.getElementById('eb').value.replace(/[^0-9.]/g,''))||0;
+
+// ── SWEDEN TAB ────────────────────────────────────────────────────────────────
+function buildSwedenTab() {
+  if (!state.customSweden) state.customSweden = SWEDEN_TRIP.map(c=>({...c,tasks:c.tasks.map(t=>({...t}))}));
+  const sweden = state.customSweden;
+  const em = state.swedenEditMode;
+  const total = sweden.reduce((s,c)=>s+c.tasks.length,0);
+  const done  = Object.values(state.checkedSweden).filter(Boolean).length;
+  const pct   = total>0?Math.round((done/total)*100):0;
+
+  const cats = sweden.map((cat,ci)=>{
+    const catDone = cat.tasks.filter((_,ti)=>state.checkedSweden[`${ci}-${ti}`]).length;
+    const tasks = cat.tasks.map((t,ti)=>{
+      const k=`${ci}-${ti}`;
+      const checked = !!state.checkedSweden[k];
+      if (em) return `<div style="display:flex;align-items:flex-start;gap:8px;padding:9px 12px;border-bottom:1px solid #f5f0e8">
+        <span style="color:#ccc;font-size:14px;cursor:grab;flex-shrink:0;margin-top:2px" class="swd-drag" data-sci="${ci}" data-sti="${ti}">☰</span>
+        <div style="flex:1;display:flex;flex-direction:column;gap:4px">
+          <input value="${t.task.replace(/"/g,"&quot;").replace(/'/g,"&#39;")}" data-sedit-task="${ci}-${ti}" style="border:1px solid #e0d0c0;border-radius:4px;padding:4px 7px;font-size:12px;outline:none;background:#faf5f0;width:100%"/>
+          <input value="${(t.tip||"").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}" data-sedit-tip="${ci}-${ti}" placeholder="Tip..." style="border:1px solid #e8ddd0;border-radius:4px;padding:3px 7px;font-size:11px;outline:none;background:#fffdf8;width:100%;color:#7a3a2a"/>
+        </div>
+        <button data-sdel="${ci}-${ti}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:15px;padding:0;margin-top:2px;flex-shrink:0">×</button>
+      </div>`;
+      return `<label class="task-row" style="display:flex">
+        <input type="checkbox" ${checked?"checked":""} data-sweden="${k}" style="margin-top:2px"/>
+        <div style="flex:1">
+          <div style="font-size:13px;color:${checked?"#bbb":"#6a1010"};text-decoration:${checked?"line-through":"none"};line-height:1.5;margin-bottom:2px">${t.task}</div>
+          <div style="font-size:11px;color:${checked?"#ccc":"#7a3a2a"};font-style:italic">💡 ${t.tip||""}</div>
+        </div>
+      </label>`;
+    }).join("");
+
+    const addTaskRow = em ? `<div style="padding:8px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center">
+      <span style="color:#9b2335;font-size:16px">+</span>
+      <input id="snew-task-${ci}" placeholder="New task..." style="flex:1;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+      <button data-sadd="${ci}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer">Add</button>
+    </div>` : "";
+
+    return `
+      <div style="margin-bottom:18px;border-left:3px solid ${cat.color};padding-left:16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">
+          <h3 style="font-size:15px;font-weight:700;color:#6a1010;flex:1">${cat.category}</h3>
+          <span style="font-size:11px;color:${catDone===cat.tasks.length?"#6b8a70":cat.color};font-weight:700">${catDone}/${cat.tasks.length}</span>
+        </div>
+        <div class="card" style="border-radius:8px;overflow:hidden">${tasks}${addTaskRow}</div>
+      </div>`;
+  }).join("");
+
+  const editBar = em ? `
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button id="swdone" style="background:#6b8a70;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+      <button id="swreset" style="background:none;border:1px solid #c17f3e;color:#c17f3e;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset</button>
+    </div>` :
+    `<button id="swedit" style="background:none;border:1px solid #5a7ea8;color:#5a7ea8;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit Tasks</button>`;
+
+  return `
+    <h2 class="section-title">🇸🇪 Sweden Summer Visit</h2>
+    <p class="section-sub" style="margin-bottom:10px">Your scouting mission — leave with every vendor confirmed.</p>
+    ${editBar}
+    <div style="font-size:13px;color:#5a7ea8;font-weight:700;margin-bottom:16px">${done} of ${total} tasks complete (${pct}%)</div>
+    <div class="prog-wrap"><div class="prog-bar" style="width:${pct}%;background:linear-gradient(90deg,#5a7ea8,#7aabe8)"></div></div>
+    ${cats}`;
+}
+
+
+
+// ── NIGHT BEFORE TAB ──────────────────────────────────────────────────────────
+const DEFAULT_NB_COSTS = [
+  {l:"Food Budget",         v:"$2,000", r:"Est. $1,500–$2,500", w:true},
+  {l:"Drinks Budget",       v:"$2,000", r:"Est. $883–$1,291",   w:false},
+  {l:"Grilling Staff (2)",  v:"$1,000", r:"Est. $600–$1,200",   w:false},
+  {l:"Wood / Fire / S'mores",v:"$1,000",r:"Est. $200–$500",     w:false},
+  {l:"Bus (50 guests)",     v:"$800",   r:"Est. $800–$1,500",   w:false},
+  {l:"Simple Decor",        v:"$200",   r:"Est. $100–$300",     w:false},
+];
+const DEFAULT_NB_FOOD = [
+  ["Hotdogs (200 pcs)","$78–$116"],["Burger patties (150 pcs)","$243–$340"],
+  ["Hotdog + burger buns","$116–$165"],["Grilled vegetables (bulk)","$78–$116"],
+  ["Condiments (ketchup, mustard, mayo)","$39–$58"],["Salads (coleslaw, pasta, green)","$78–$116"],
+  ["Chips, rolls, extras","$39–$58"],["Paper plates, utensils, cups","$49–$78"],
+  ["Graham crackers + marshmallows + chocolate","~$40"],["Roasting sticks","~$15"],
+];
+const DEFAULT_NB_DRINKS = [
+  ["Beer (200 cans/bottles)","$194–$291"],["Red + white wine (20–25 bottles)","$243–$340"],
+  ["Aperol (6–8 bottles)","$116–$155"],["Prosecco for spritzes (15–20 bottles)","$194–$291"],
+  ["Soda water, soft drinks, water","$107–$165"],["Ice, cups, straws, lemon/lime","$29–$49"],
+];
+
+function buildNightBeforeTab() {
+  if (!state.customNBCosts)  state.customNBCosts  = DEFAULT_NB_COSTS.map(r=>({...r}));
+  if (!state.customNBFood)   state.customNBFood   = DEFAULT_NB_FOOD.map(r=>[...r]);
+  if (!state.customNBDrinks) state.customNBDrinks = DEFAULT_NB_DRINKS.map(r=>[...r]);
+  const em = state.nbEditMode;
+
+  const costCards = state.customNBCosts.map((c,i)=>{
+    if (em) return `<div style="background:white;border:1px solid #e0d0c0;border-radius:8px;padding:10px;border-left:4px solid #9b2335;display:flex;flex-direction:column;gap:5px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <input value="${c.l.replace(/"/g,"&quot;")}" data-nbc-label="${i}" placeholder="Label" style="border:1px solid #e0d0c0;border-radius:4px;padding:3px 6px;font-size:11px;outline:none;background:#faf5f0;width:70%"/>
+        <button data-nbc-del="${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:15px;padding:0">×</button>
+      </div>
+      <input value="${c.v.replace(/"/g,"&quot;")}" data-nbc-val="${i}" placeholder="e.g. $2,000" style="border:1px solid #e0d0c0;border-radius:4px;padding:3px 6px;font-size:14px;font-weight:700;color:#9b2335;outline:none;background:#faf5f0;width:100%"/>
+      <input value="${c.r.replace(/"/g,"&quot;")}" data-nbc-range="${i}" placeholder="e.g. Est. $1,500–$2,500" style="border:1px solid #e0d0c0;border-radius:4px;padding:3px 6px;font-size:11px;color:#8a5a4a;outline:none;background:#faf5f0;width:100%"/>
+    </div>`;
+    return `<div style="background:white;border:1px solid ${c.w?"#f0c080":"#e0d0c0"};border-radius:8px;padding:13px;border-left:4px solid ${c.w?"#c17f3e":"#9b2335"}">
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#7a3a2a;margin-bottom:3px">${c.l}</div>
+      <div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#9b2335;margin-bottom:2px">${c.v}</div>
+      <div style="font-size:11px;color:#8a5a4a">${c.r}</div>
+    </div>`;
+  }).join("");
+
+  const addCostRow = em ? `<div style="grid-column:1/-1;display:flex;gap:6px;align-items:center;padding:4px 0">
+    <input id="nbc-new-label" placeholder="Label (e.g. Photographer)" style="flex:2;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+    <input id="nbc-new-val" placeholder="$0" style="width:70px;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+    <button id="nbc-add" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">Add</button>
+  </div>` : "";
+
+  const buildEditableList = (items, prefix) => {
+    const rows = items.map(([name,price],i)=>{
+      if (em) return `<div style="display:flex;gap:6px;padding:6px 12px;border-bottom:1px solid #f5f0e8;align-items:center">
+        <input value="${name.replace(/"/g,"&quot;")}" data-nb-name="${prefix}-${i}" style="flex:2;border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:12px;outline:none;background:#faf5f0"/>
+        <input value="${price.replace(/"/g,"&quot;")}" data-nb-price="${prefix}-${i}" style="width:90px;border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:11px;text-align:right;outline:none;background:#faf5f0;color:#9b2335;font-weight:700"/>
+        <button data-nb-del="${prefix}-${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:15px;padding:0;flex-shrink:0">×</button>
+      </div>`;
+      return `<div style="display:flex;justify-content:space-between;padding:7px 16px;border-bottom:1px solid #f5f0e8;font-size:13px"><span>${name}</span><span style="color:#9b2335;font-weight:700;margin-left:12px;white-space:nowrap">${price}</span></div>`;
+    }).join("");
+    const addRow = em ? `<div style="padding:8px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center">
+      <span style="color:#9b2335;font-size:16px">+</span>
+      <input id="nb-new-name-${prefix}" placeholder="Item..." style="flex:2;border:1px solid #d4c4b0;border-radius:4px;padding:5px 7px;font-size:12px;outline:none;background:white"/>
+      <input id="nb-new-price-${prefix}" placeholder="$0" style="width:70px;border:1px solid #d4c4b0;border-radius:4px;padding:5px 7px;font-size:11px;text-align:right;outline:none;background:white"/>
+      <button data-nb-add="${prefix}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer">Add</button>
+    </div>` : "";
+    return rows + addRow;
+  };
+
+  const editBar = em ? `
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button id="nb-done" style="background:#6b8a70;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+      <button id="nb-reset" style="background:none;border:1px solid #c17f3e;color:#c17f3e;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset</button>
+    </div>
+    <p class="section-sub" style="margin-bottom:12px">Edit any cost card, item name, or price · × to delete · Add new rows</p>` :
+    `<button id="nb-edit" style="background:none;border:1px solid #7a6e5f;color:#7a6e5f;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit Night Before</button>`;
+
+  return `
+    <h2 class="section-title">🔥 Friday — Night Before BBQ</h2>
+    <p class="section-sub" style="margin-bottom:12px">Casual outdoor BBQ for 100 guests. Grilling staff + bonfire + s'mores.</p>
+    ${editBar}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px">
+      ${costCards}
+      ${addCostRow}
+    </div>
+    <div class="card" style="margin-bottom:14px">
+      <div style="padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;border-bottom:1px solid #f0e4d4">🛒 ICA Food List</div>
+      ${buildEditableList(state.customNBFood,"food")}
+      <div style="display:flex;justify-content:space-between;padding:10px 16px;font-weight:700">
+        <span style="font-size:11px;text-transform:uppercase;letter-spacing:.05em">Total</span>
+        <span style="font-family:'Playfair Display',serif;font-size:15px;color:#9b2335">$718–$1,047</span>
+      </div>
+    </div>
+    <div class="card" style="margin-bottom:14px">
+      <div style="padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;border-bottom:1px solid #f0e4d4">🍷 Systembolaget Drinks</div>
+      ${buildEditableList(state.customNBDrinks,"drinks")}
+      <div style="display:flex;justify-content:space-between;padding:10px 16px;font-weight:700">
+        <span style="font-size:11px;text-transform:uppercase;letter-spacing:.05em">Total</span>
+        <span style="font-family:'Playfair Display',serif;font-size:15px;color:#9b2335">$883–$1,291</span>
+      </div>
+    </div>`;
+}
+
+function buildShoppingMiniList(title, items, total) {
+  return `<div class="card" style="margin-bottom:14px">
+    <div style="padding:12px 16px;font-family:'Playfair Display',serif;font-size:15px;border-bottom:1px solid #f0e4d4">${title}</div>
+    ${items.map(([n,p])=>`<div style="display:flex;justify-content:space-between;padding:7px 16px;border-bottom:1px solid #f5f0e8;font-size:13px"><span>${n}</span><span style="color:#9b2335;font-weight:700;margin-left:12px;white-space:nowrap">${p}</span></div>`).join("")}
+    <div style="display:flex;justify-content:space-between;padding:10px 16px;font-weight:700">
+      <span style="font-size:11px;text-transform:uppercase;letter-spacing:.05em">Total</span>
+      <span style="font-family:'Playfair Display',serif;font-size:15px;color:#9b2335">${total}</span>
+    </div>
+  </div>`;
+}
+
+// ── WEDDING DAY TAB ───────────────────────────────────────────────────────────
+function buildDayOfTab() {
+  // Use state.customSchedule if it exists, otherwise seed from DAY_SCHEDULE
+  if (!state.customSchedule) {
+    state.customSchedule = DAY_SCHEDULE.map(day=>({
+      day: day.day, emoji: day.emoji, color: day.color,
+      events: day.events.map(e=>({...e}))
+    }));
+  }
+
+  const editMode = state.scheduleEditMode || false;
+
+  const days = state.customSchedule.map((day, di)=>{
+    const events = day.events.map((ev, ei)=>{
+      if (editMode) {
+        return `<div class="sched-row" data-di="${di}" data-ei="${ei}" draggable="true"
+          style="display:grid;grid-template-columns:28px 100px 1fr 28px;gap:8px;padding:8px 12px;border-bottom:1px solid #f5f0e8;align-items:center;background:white;cursor:grab;touch-action:none">
+          <span style="font-size:16px;color:#ccc;cursor:grab;user-select:none" title="Drag to reorder">☰</span>
+          <input value="${ev.time}" data-edit-time="${di}-${ei}"
+            style="border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:11px;font-weight:700;color:${day.color};background:#faf5f0;width:100%;outline:none"/>
+          <input value="${ev.event}" data-edit-event="${di}-${ei}"
+            style="border:1px solid #e0d0c0;border-radius:4px;padding:4px 8px;font-size:12px;color:#6a1010;background:#faf5f0;width:100%;outline:none"/>
+          <button data-del-event="${di}-${ei}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:16px;padding:0;line-height:1;flex-shrink:0">×</button>
+        </div>`;
+      } else {
+        return `<div class="day-event" style="border-bottom:${ei<day.events.length-1?"1px solid #f5f0e8":"none"}">
+          <span style="font-size:11px;font-weight:700;color:${day.color}">${ev.time}</span>
+          <span style="font-size:13px;line-height:1.5">${ev.event}</span>
+        </div>`;
+      }
+    }).join("");
+
+    const addRow = editMode ? `
+      <div style="padding:9px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:8px;align-items:center">
+        <span style="font-size:16px;color:#9b2335">+</span>
+        <input placeholder="Time (e.g. 4:00 PM)" id="new-time-${di}"
+          style="width:110px;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;color:#6a1010;background:white;outline:none"/>
+        <input placeholder="Event description" id="new-event-${di}"
+          style="flex:1;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;color:#6a1010;background:white;outline:none"/>
+        <button data-add-event="${di}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap">Add</button>
+      </div>` : "";
+
+    return `<div class="day-card" style="border-top-color:${day.color};margin-bottom:16px">
+      <div style="background:${day.color};padding:12px 16px">
+        <h3 style="color:white;font-size:17px;font-weight:400">${day.emoji} ${day.day}</h3>
+      </div>
+      <div id="events-${di}">${events}</div>
+      ${addRow}
+    </div>`;
+  }).join("");
+
+  const editBtn = editMode
+    ? `<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+        <button id="sched-done" style="background:#6b8a70;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+        <button id="sched-reset" style="background:none;border:1px solid #c17f3e;color:#c17f3e;border-radius:6px;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset to Default</button>
+      </div>`
+    : `<button id="sched-edit" style="background:none;border:1px solid #9b2335;color:#9b2335;border-radius:6px;padding:8px 18px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:16px">✏️ Edit Timeline</button>`;
+
+  return `
+    <h2 class="section-title">⛪ Wedding Day Schedule</h2>
+    <p class="section-sub">${editMode?"Drag rows to reorder · Edit any time or description · Add or remove events":"Full timeline across Friday evening, Saturday wedding, and Sunday morning."}</p>
+    ${editBtn}
+    ${days}
+    ${buildShoppingMiniList("🍾 Open Bar — Systembolaget (100 guests, 5–6 hrs)",[
+      ["Beer (300–350 cans/bottles)","$291–$388"],["Red + white wine (40–50 bottles)","$485–$679"],
+      ["Champagne/Prosecco toast (15–20 bottles)","$194–$340"],["Spirits: vodka, gin, whiskey (8–10 bottles)","$388–$582"],
+      ["Mixers: tonic, juice, soda (bulk)","$146–$243"],["Aperol (4–6 bottles)","$78–$116"],
+      ["Soft drinks + water (bulk)","$97–$146"],["Ice (bulk)","$49–$78"],
+    ],"$1,728–$2,572")}
+    <div style="padding:9px 11px;background:#f0f8f0;border-radius:6px;font-size:12px;color:#5a7a5a;margin-top:-8px;margin-bottom:16px">
+      ✅ Your $5,000 budget covers this list and leaves a solid buffer!
+    </div>`;
+}
+
+// ── PACKING TAB ───────────────────────────────────────────────────────────────
+const DEFAULT_PACKING = [
+  {
+    category: "👗 Bridal & Clothing",
+    color: "#9b2335",
+    items: [
+      { name: "Wedding dress (in garment bag)", checked: false },
+      { name: "Reception / party dress", checked: false },
+      { name: "Bridal shoes", checked: false },
+      { name: "Wedding jewelry (earrings, necklace, bracelet)", checked: false },
+      { name: "Veil or hair accessories", checked: false },
+      { name: "Garter", checked: false },
+      { name: "Rehearsal dinner outfit", checked: false },
+      { name: "Travel outfit for flights", checked: false },
+      { name: "Casual clothes for rest of trip", checked: false },
+      { name: "Pajamas", checked: false },
+      { name: "Swimsuit (just in case)", checked: false },
+    ]
+  },
+  {
+    category: "📸 Ceremony & Décor",
+    color: "#7a1a1a",
+    items: [
+      { name: "Disposable cameras (for tables)", checked: false },
+      { name: "Welcome sign / signage for wedding", checked: false },
+      { name: "Seating chart or table cards", checked: false },
+      { name: "Ring box", checked: false },
+      { name: "Flower girl basket (if needed)", checked: false },
+      { name: "Card box or envelope holder", checked: false },
+      { name: "Unity candle or ceremony items", checked: false },
+      { name: "Table numbers", checked: false },
+      { name: "Menu cards", checked: false },
+      { name: "Ribbon or twine for décor", checked: false },
+    ]
+  },
+  {
+    category: "💄 Beauty & Getting Ready",
+    color: "#8a2040",
+    items: [
+      { name: "Makeup (foundation, mascara, lipstick etc.)", checked: false },
+      { name: "Perfume", checked: false },
+      { name: "Nail polish for touch-ups", checked: false },
+      { name: "Hair tools (curling iron, straightener)", checked: false },
+      { name: "Bobby pins, hair ties, hair spray", checked: false },
+      { name: "False lashes + glue (if using)", checked: false },
+      { name: "Face mask / skincare for morning of", checked: false },
+      { name: "Teeth whitening strips", checked: false },
+      { name: "Deodorant / personal hygiene", checked: false },
+      { name: "Razor", checked: false },
+    ]
+  },
+  {
+    category: "🆘 Emergency Kit",
+    color: "#8a3030",
+    items: [
+      { name: "Stain remover pen (Tide To Go)", checked: false },
+      { name: "Safety pins (multiple sizes)", checked: false },
+      { name: "Double-sided fashion tape", checked: false },
+      { name: "Needle and thread (white + dress color)", checked: false },
+      { name: "Pain killers (ibuprofen / Tylenol)", checked: false },
+      { name: "Blotting papers", checked: false },
+      { name: "Breath mints / gum", checked: false },
+      { name: "Bandaids (especially for shoes)", checked: false },
+      { name: "Mini hairspray", checked: false },
+      { name: "Tampons / period products just in case", checked: false },
+      { name: "Phone charger + portable power bank", checked: false },
+    ]
+  },
+  {
+    category: "📋 Documents & Admin",
+    color: "#4a6a9a",
+    items: [
+      { name: "Passports (check expiry!)", checked: false },
+      { name: "Marriage license / paperwork for Sweden", checked: false },
+      { name: "Wedding vows (printed backup)", checked: false },
+      { name: "Vendor contact list (printed)", checked: false },
+      { name: "Flight confirmation + hotel bookings", checked: false },
+      { name: "Travel insurance documents", checked: false },
+      { name: "Credit cards + cash (some euros/SEK)", checked: false },
+    ]
+  },
+  {
+    category: "🎁 Gifts & Extras",
+    color: "#5a7a50",
+    items: [
+      { name: "Gifts for bridesmaids", checked: false },
+      { name: "Gift for Ryan (optional morning-of surprise)", checked: false },
+      { name: "Thank you cards (pre-written if possible)", checked: false },
+      { name: "Something old, something new, something borrowed, something blue", checked: false },
+      { name: "Gratuity envelopes (pre-filled with cash)", checked: false },
+      { name: "Luggage locks", checked: false },
+      { name: "Packing cubes", checked: false },
+    ]
+  },
+];
+
+function buildPackingTab() {
+  if (!state.customPacking) {
+    state.customPacking = DEFAULT_PACKING.map(cat=>({
+      ...cat,
+      items: cat.items.map(i=>({...i}))
+    }));
+  }
+  const em = state.packingEditMode;
+  const allItems = state.customPacking.reduce((s,c)=>s+c.items.length, 0);
+  const packedItems = state.customPacking.reduce((s,c)=>
+    s + c.items.filter(i=>i.checked).length, 0);
+  const pct = allItems > 0 ? Math.round((packedItems/allItems)*100) : 0;
+
+  const cats = state.customPacking.map((cat, ci) => {
+    const catPacked = cat.items.filter(i=>i.checked).length;
+
+    const items = cat.items.map((item, ii) => {
+      if (em) return `
+        <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid #f5f0e8">
+          <span style="color:#ccc;font-size:14px;cursor:grab;flex-shrink:0">☰</span>
+          <input value="${(item.name||"").replace(/"/g,"&quot;")}" data-pack-name="${ci}-${ii}"
+            style="flex:1;border:1px solid #e0d0c0;border-radius:4px;padding:5px 7px;font-size:12px;outline:none;background:#faf5f0"/>
+          <button data-pack-del="${ci}-${ii}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:16px;padding:0;flex-shrink:0">×</button>
+        </div>`;
+      return `
+        <label style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #f5f0e8;cursor:pointer;transition:background .12s">
+          <input type="checkbox" ${item.checked?"checked":""} data-pack-check="${ci}-${ii}"/>
+          <span style="flex:1;font-size:13px;color:${item.checked?"#bbb":"#1a0a0a"};text-decoration:${item.checked?"line-through":"none"};line-height:1.5">${item.name}</span>
+          ${item.checked?`<span style="font-size:11px;color:#5a7a50;font-weight:700">✓ packed</span>`:""}
+        </label>`;
+    }).join("");
+
+    const addRow = em ? `
+      <div style="padding:8px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center">
+        <span style="color:#9b2335;font-size:16px">+</span>
+        <input id="pack-new-${ci}" placeholder="Add item..." style="flex:1;border:1px solid #d4c4b4;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+        <button data-pack-add="${ci}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">Add</button>
+      </div>` : `
+      <div style="padding:8px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center">
+        <span style="color:#9b2335;font-size:16px">+</span>
+        <input id="pack-new-${ci}" placeholder="Add item to this category..." style="flex:1;border:1px solid #d4c4b4;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+        <button data-pack-add="${ci}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">Add</button>
+      </div>`;
+
+    return `
+      <div style="margin-bottom:18px;border-left:3px solid ${cat.color};padding-left:16px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">
+          <h3 style="font-size:15px;font-weight:700;color:#1a0a0a;flex:1">${cat.category}</h3>
+          <span style="font-size:11px;font-weight:700;color:${catPacked===cat.items.length&&cat.items.length>0?"#5a7a50":cat.color}">${catPacked}/${cat.items.length}</span>
+        </div>
+        <div class="card">${items}${addRow}</div>
+      </div>`;
+  }).join("");
+
+  const editBar = em ? `
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button id="pack-done" style="background:#5a7a50;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+      <button id="pack-reset" style="background:none;border:1px solid #b05020;color:#b05020;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset</button>
+    </div>
+    <p class="section-sub" style="margin-bottom:12px">Edit any item · × to delete · Add items to any category</p>` :
+    `<button id="pack-edit" style="background:none;border:1px solid #9b2335;color:#9b2335;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit Packing List</button>`;
+
+  return `
+    <h2 class="section-title">🧳 Pack from America</h2>
+    <p class="section-sub" style="margin-bottom:10px">Everything to bring from the US for the wedding. Check off as you pack.</p>
+    ${editBar}
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+      <div style="font-size:13px;color:#9b2335;font-weight:700">${packedItems} of ${allItems} items packed (${pct}%)</div>
+      ${packedItems===allItems&&allItems>0?`<div style="font-size:12px;color:#5a7a50;font-weight:700">🎉 All packed!</div>`:""}
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" style="width:${pct}%;background:linear-gradient(90deg,#9b2335,#c04060)"></div></div>
+    ${cats}`;
+}
+
+// ── SHOPPING TAB ──────────────────────────────────────────────────────────────
+function buildShoppingTab() {
+  // Seed customShoppingLists from defaults if not set
+  if (!state.customShoppingLists) {
+    state.customShoppingLists = SHOPPING_LISTS.map(l=>({
+      ...l,
+      items: l.items.map(i=>({...i}))
+    }));
+  }
+  const lists = state.customShoppingLists;
+  const em = state.shoppingEditMode;
+
+  const totalItems   = lists.reduce((s,l)=>s+l.items.length,0);
+  const checkedCount = lists.reduce((s,l)=>s+l.items.filter((_,i)=>state.checkedShop[`${l.key}-${i}`]).length,0);
+  const pct = totalItems>0?Math.round((checkedCount/totalItems)*100):0;
+
+  const listHtml = lists.map((list,li)=>{
+    const lChecked = list.items.filter((_,i)=>state.checkedShop[`${list.key}-${i}`]).length;
+
+    const rows = list.items.map((item,i)=>{
+      const k=`${list.key}-${i}`;
+      const done=!!state.checkedShop[k];
+      if (em) return `
+        <div style="display:flex;align-items:center;gap:6px;padding:7px 12px;border-bottom:1px solid #f5f0e8">
+          <span style="color:#ccc;font-size:14px;cursor:grab;flex-shrink:0">☰</span>
+          <input value="${(item.name||"").replace(/"/g,"&quot;")}" data-shop-name="${list.key}-${i}"
+            style="flex:2;border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:12px;outline:none;background:#faf5f0"/>
+          <input value="${(item.qty||"").replace(/"/g,"&quot;")}" data-shop-qty="${list.key}-${i}" placeholder="Qty"
+            style="width:80px;border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:11px;outline:none;background:#faf5f0"/>
+          <input value="${(item.price||"").replace(/"/g,"&quot;")}" data-shop-price="${list.key}-${i}" placeholder="Price"
+            style="width:72px;border:1px solid #e0d0c0;border-radius:4px;padding:4px 6px;font-size:11px;text-align:right;outline:none;background:#faf5f0;color:#9b2335;font-weight:700"/>
+          <button data-shop-del="${list.key}-${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:16px;padding:0;flex-shrink:0">×</button>
+        </div>`;
+      return `
+        <div style="display:grid;grid-template-columns:28px 1fr 90px 72px;gap:8px;padding:8px 13px;border-bottom:1px solid #f5f0e8;align-items:center">
+          <input type="checkbox" ${done?"checked":""} data-shop="${k}"/>
+          <span style="font-size:13px;color:${done?"#bbb":"#6a1010"};text-decoration:${done?"line-through":"none"};line-height:1.4">${item.name||""}</span>
+          <span style="font-size:11px;color:${done?"#ccc":"#7a3a2a"}">${item.qty||""}</span>
+          <span style="font-size:11px;color:${done?"#ccc":item.price?"#9b2335":"#ccc"};text-align:right;font-weight:${item.price?700:400}">${item.price||"—"}</span>
+        </div>`;
+    }).join("");
+
+    const addRow = `
+      <div style="padding:9px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+        <span style="font-size:18px;color:#9b2335">+</span>
+        <input id="snew-name-${list.key}" placeholder="Item name" style="flex:2;min-width:100px;border:1px solid #d4c4b4;border-radius:4px;padding:6px 8px;font-size:13px;outline:none;background:white"/>
+        <input id="snew-qty-${list.key}" placeholder="Qty" style="width:70px;border:1px solid #d4c4b4;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+        <input id="snew-price-${list.key}" placeholder="$0" style="width:60px;border:1px solid #d4c4b4;border-radius:4px;padding:6px 8px;font-size:12px;text-align:right;outline:none;background:white"/>
+        <button data-shop-add="${list.key}" style="background:#9b2335;color:white;border:none;border-radius:5px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer">Add</button>
+      </div>`;
+
+    return `
+      <div class="card" style="margin-bottom:16px">
+        <div style="background:#6a1010;padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div style="flex:1">
+            <div style="font-family:'Playfair Display',serif;color:#faf5f0;font-size:15px;margin-bottom:4px">${list.title}</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <span class="shop-store" style="background:${list.storeColor}">${list.store}</span>
+              <span style="font-size:11px;color:#d4a090">Budget: ${list.budget}</span>
+            </div>
+          </div>
+          <span style="font-size:12px;font-weight:700;color:${lChecked===list.items.length&&list.items.length>0?"#7aaa7a":"#d4a090"}">${lChecked}/${list.items.length}</span>
+        </div>
+        ${em?"":`<div style="display:grid;grid-template-columns:28px 1fr 90px 72px;gap:8px;padding:6px 13px;background:#f5f0e8;border-bottom:1px solid #e0d0c0;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a">
+          <div></div><div>Item</div><div>Qty</div><div style="text-align:right">Price</div>
+        </div>`}
+        ${rows}
+        ${addRow}
+      </div>`;
+  }).join("");
+
+  const editBar = em ? `
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button id="shop-done" style="background:#5a7a50;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+      <button id="shop-reset" style="background:none;border:1px solid #b05020;color:#b05020;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset All Lists</button>
+    </div>
+    <p class="section-sub" style="margin-bottom:12px">Edit any item name, qty, or price · × to delete · Add items at the bottom of each list</p>` :
+    `<button id="shop-edit" style="background:none;border:1px solid #9b2335;color:#9b2335;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit Shopping Lists</button>`;
+
+  return `
+    <h2 class="section-title">🛒 Complete Shopping Lists</h2>
+    <p class="section-sub" style="margin-bottom:10px">${em?"Editing — add, remove, or change any item on any list":"Check off as you shop · Add your own items · Tap ✏️ to edit or remove items"}</p>
+    ${editBar}
+    <div style="font-size:13px;color:#5a7a5a;font-weight:700;margin-bottom:16px">${checkedCount} of ${totalItems} items checked off (${pct}%)</div>
+    <div class="prog-wrap"><div class="prog-bar" style="width:${pct}%;background:linear-gradient(90deg,#5a7a5a,#7aaa7a)"></div></div>
+    ${listHtml}`;
+}
+
+// ── EXTRAS TAB ────────────────────────────────────────────────────────────────
+function buildExtrasTab() {
+  const extraBudget = state.extraItems.reduce((s,r)=>s+r.budget,0);
+  const extraActualTotal = state.extraItems.reduce((s,r,i)=>s+(parseFloat(state.extraActual[i])||0),0);
+  const allBudget = YOUR_TOTAL + extraBudget;
+  const allActual = BUDGET_LINES.reduce((s,r)=>s+(parseFloat(state.actualCosts[r.item])||0),0) + extraActualTotal;
+  const diff = allActual - allBudget;
+
+  const statusColor = s=>s==="ok"?"#6b8a70":s==="warning"?"#c17f3e":"#5a7ea8";
+
+  const tableRows = state.extraItems.length===0
+    ? `<div class="empty"><div style="font-size:28px;margin-bottom:8px">📋</div><div style="font-family:'Playfair Display',serif;font-size:15px;margin-bottom:6px">No extra items yet</div><div style="font-size:13px">Add items above — they'll roll into your grand total automatically.</div></div>`
+    : `<div class="card">
+        <div class="tbl-head" style="grid-template-columns:20px 1fr 80px 80px 26px;gap:8px">
+          <div></div><div>Item</div>
+          <div style="text-align:right">Budgeted</div>
+          <div style="text-align:right;color:#5a8a60">Actual $</div>
+          <div></div>
+        </div>
+        ${state.extraItems.map((row,i)=>{
+          const actual = state.extraActual[i]||"";
+          return `<div class="tbl-row" style="grid-template-columns:20px 1fr 80px 80px 26px;gap:8px">
+            <span class="${dotClass(row.status)}">${dotIcon(row.status)}</span>
+            <div style="font-size:13px;font-weight:600">${row.item}</div>
+            <div style="text-align:right;font-size:13px;font-weight:700;color:${row.budget===0?"#bbb":"#9b2335"}">${fmtBudget(row.budget)}</div>
+            <div style="display:flex;justify-content:flex-end">
+              <div class="actual-wrap">
+                <span class="actual-prefix">$</span>
+                <input class="actual-inp" type="text" inputmode="decimal" placeholder="0" value="${actual}" data-extra-actual="${i}" style="width:72px"/>
+              </div>
+            </div>
+            <button data-remove-extra="${i}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:16px;padding:0;line-height:1">×</button>
+          </div>`;
+        }).join("")}
+        <div class="tbl-foot" style="grid-template-columns:20px 1fr 80px 80px 26px;gap:8px">
+          <div></div>
+          <div style="font-size:11px;font-weight:700;color:#d4a090;text-transform:uppercase">Extras Subtotal</div>
+          <div style="text-align:right;font-size:14px;font-weight:700;color:#9b2335">$${extraBudget.toLocaleString()}</div>
+          <div style="text-align:right;font-size:14px;font-weight:700;color:${extraActualTotal===0?"#666":"#7aaa7a"}">${extraActualTotal===0?"—":fmt(extraActualTotal)}</div>
+          <div></div>
+        </div>
+      </div>`;
+
+  return `
+    <h2 class="section-title">➕ Add Your Own Budget Items</h2>
+    <p class="section-sub">Anything not in the main list — honeymoon, rehearsal dinner, favors, tips, extra guests, etc. These roll into your grand total automatically.</p>
+
+    <div style="background:white;border:1px solid #e0d0c0;border-radius:8px;padding:14px 16px;margin-bottom:18px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#9b2335">$${allBudget.toLocaleString()}</div>
+        <div style="font-size:10px;color:#8a5a4a;text-transform:uppercase;letter-spacing:.08em;margin-top:2px">Total Budgeted</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:${allActual===0?"#bbb":allActual>allBudget?"#e07070":"#6b9a70"}">${allActual===0?"—":fmt(allActual)}</div>
+        <div style="font-size:10px;color:#8a5a4a;text-transform:uppercase;letter-spacing:.08em;margin-top:2px">Total Actual</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:${allActual===0?"#bbb":diff>0?"#e07070":"#6b9a70"}">${allActual===0?"—":diff>0?"▲ "+fmt(diff):"▼ "+fmt(Math.abs(diff))}</div>
+        <div style="font-size:10px;color:#8a5a4a;text-transform:uppercase;letter-spacing:.08em;margin-top:2px">${allActual===0?"Enter actuals":diff>0?"Over budget":"Under budget"}</div>
+      </div>
+    </div>
+
+    <div style="background:white;border:1px solid #d4c4b0;border-radius:8px;padding:16px 18px;margin-bottom:20px">
+      <div style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;margin-bottom:12px;color:#6a1010">Add a New Item</div>
+      <div style="display:grid;grid-template-columns:1fr 100px 110px 36px;gap:10px;align-items:end">
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:4px">Item name</div>
+          <input id="extra-item-name" class="inp" placeholder="e.g. Honeymoon flights" value="${state.newExtra.item}" style="font-size:13px;padding:8px 10px"/>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:4px">Budget ($)</div>
+          <div class="actual-wrap" style="width:100%">
+            <span class="actual-prefix" style="color:#9b2335">$</span>
+            <input id="extra-item-budget" class="actual-inp" type="text" inputmode="decimal" placeholder="0" value="${state.newExtra.budget}" style="width:100%;border-color:#d4c4b0;background:#faf5f0;color:#6a1010"/>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#7a3a2a;margin-bottom:4px">Status</div>
+          <select id="extra-item-status" style="width:100%;padding:8px;font-size:12px;border:1px solid #d4c4b0;background:#faf5f0">
+            <option value="ok" ${state.newExtra.status==="ok"?"selected":""}>✓ On Track</option>
+            <option value="warning" ${state.newExtra.status==="warning"?"selected":""}>⚠ Revisit</option>
+            <option value="note" ${state.newExtra.status==="note"?"selected":""}>ℹ Note</option>
+          </select>
+        </div>
+        <button id="add-extra-btn" style="background:#9b2335;color:white;border:none;border-radius:5px;width:36px;height:36px;font-size:20px;cursor:pointer;align-self:flex-end">+</button>
+      </div>
+    </div>
+
+    ${tableRows}`;
+}
+
+// ── CHECKLIST TAB ─────────────────────────────────────────────────────────────
+function buildChecklistTab() {
+  if (!state.customTimeline) state.customTimeline = TIMELINE.map(p=>({...p,tasks:p.tasks.map(t=>({...t}))}));
+  const timeline = state.customTimeline;
+  const em = state.timelineEditMode;
+  const total = timeline.reduce((s,p)=>s+p.tasks.length,0);
+  const done  = Object.values(state.checkedTasks).filter(Boolean).length;
+  const pct   = total>0?Math.round((done/total)*100):0;
+
+  const phases = timeline.map((phase,pi)=>{
+    const pDone = phase.tasks.filter((_,ti)=>state.checkedTasks[`${pi}-${ti}`]).length;
+    const tasks = phase.tasks.map((task,ti)=>{
+      const k=`${pi}-${ti}`;
+      const checked=!!state.checkedTasks[k];
+      if (em) return `<div style="display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid #f5f0e8">
+        <span style="color:#ccc;font-size:14px;cursor:grab;flex-shrink:0" class="tl-drag" data-tpi="${pi}" data-tti="${ti}">☰</span>
+        <input value="${(task.task||task).replace(/"/g,"&quot;").replace(/'/g,"&#39;")}" data-tedit="${pi}-${ti}" style="flex:1;border:1px solid #e0d0c0;border-radius:4px;padding:5px 7px;font-size:12px;outline:none;background:#faf5f0"/>
+        <select data-tpriority="${pi}-${ti}" style="border:1px solid #e0d0c0;border-radius:4px;padding:5px 6px;font-size:11px;background:#faf5f0;outline:none;width:72px">
+          <option value="high" ${(task.priority||"medium")==="high"?"selected":""}>🔴 high</option>
+          <option value="medium" ${(task.priority||"medium")==="medium"?"selected":""}>🟡 med</option>
+          <option value="low" ${(task.priority||"medium")==="low"?"selected":""}>🟢 low</option>
+        </select>
+        <button data-tdel="${pi}-${ti}" style="background:none;border:none;cursor:pointer;color:#c0392b;font-size:15px;padding:0;flex-shrink:0">×</button>
+      </div>`;
+      return `<label class="task-row" style="display:flex">
+        <input type="checkbox" ${checked?"checked":""} data-task="${k}" style="margin-top:2px"/>
+        <span style="flex:1;font-size:13px;color:${checked?"#bbb":"#6a1010"};text-decoration:${checked?"line-through":"none"};line-height:1.5">${task.task||task}</span>
+        <span class="${pillClass(task.priority||"medium")}">${task.priority||"medium"}</span>
+      </label>`;
+    }).join("");
+
+    const addTaskRow = em ? `<div style="padding:8px 12px;background:#faf5f0;border-top:1px dashed #e0d0c0;display:flex;gap:6px;align-items:center">
+      <span style="color:#9b2335;font-size:16px">+</span>
+      <input id="tnew-task-${pi}" placeholder="New task..." style="flex:1;border:1px solid #d4c4b0;border-radius:4px;padding:6px 8px;font-size:12px;outline:none;background:white"/>
+      <button data-tadd="${pi}" style="background:#9b2335;color:white;border:none;border-radius:4px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer">Add</button>
+    </div>` : "";
+
+    return `
+      <div class="phase-wrap">
+        <div class="phase-hd">
+          <span style="font-size:17px">${phase.emoji}</span>
+          <h3 style="font-size:15px;font-weight:700;color:#6a1010;flex:1">${phase.phase}</h3>
+          <span style="font-size:11px;color:${pDone===phase.tasks.length?"#6b8a70":"#9b2335"};font-weight:700">${pDone}/${phase.tasks.length}</span>
+        </div>
+        <div class="card">${tasks}${addTaskRow}</div>
+      </div>`;
+  }).join("");
+
+  const editBar = em ? `
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button id="tdone" style="background:#6b8a70;color:white;border:none;border-radius:6px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer">✓ Done Editing</button>
+      <button id="treset" style="background:none;border:1px solid #c17f3e;color:#c17f3e;border-radius:6px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer">↺ Reset</button>
+    </div>` :
+    `<button id="tedit" style="background:none;border:1px solid #9b2335;color:#9b2335;border-radius:6px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer;margin-bottom:14px">✏️ Edit Tasks</button>`;
+
+  return `
+    <h2 class="section-title">✅ Master To-Do List</h2>
+    <p class="section-sub" style="margin-bottom:10px">${em?"Edit tasks · drag to reorder · × to delete · Add new tasks per phase":"Organized by timeline. Check off as you go."}</p>
+    ${editBar}
+    <div style="font-size:13px;color:#9b2335;font-weight:700;margin-bottom:16px">${done} of ${total} tasks complete (${pct}%)</div>
+    <div class="prog-wrap"><div class="prog-bar" style="width:${pct}%;background:linear-gradient(90deg,#9b2335,#d4a574)"></div></div>
+    ${phases}`;
+}
+
+
+
+// ─── EVENTS ───────────────────────────────────────────────────────────────────
+function attachEvents() {
+  // Tab nav
+  document.querySelectorAll("[data-tab]").forEach(btn=>{
+    btn.addEventListener("click",()=>{ state.tab=btn.dataset.tab; render(); window.scrollTo(0,0); });
+  });
+
+  // Checkboxes — tasks
+  document.querySelectorAll("[data-task]").forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      state.checkedTasks[cb.dataset.task]=cb.checked;
+      scheduleSave(); updateStats();
+    });
+  });
+
+  // Checkboxes — sweden
+  document.querySelectorAll("[data-sweden]").forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      state.checkedSweden[cb.dataset.sweden]=cb.checked;
+      scheduleSave(); updateStats();
+    });
+  });
+
+  // Checkboxes — shopping
+  document.querySelectorAll("[data-shop]").forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      state.checkedShop[cb.dataset.shop]=cb.checked;
+      scheduleSave(); updateStats();
+    });
+  });
+
+  // ── SHOPPING HANDLERS ───────────────────────────────────────────────────────
+  // Checkboxes
+  document.querySelectorAll("[data-shop]").forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      state.checkedShop[cb.dataset.shop]=cb.checked;
+      scheduleSave(); updateStats();
+    });
+  });
+
+  // Edit mode toggle
+  document.getElementById("shop-edit")?.addEventListener("click",()=>{ state.shoppingEditMode=true; render(); });
+  document.getElementById("shop-done")?.addEventListener("click",()=>{ state.shoppingEditMode=false; scheduleSave(); render(); });
+  document.getElementById("shop-reset")?.addEventListener("click",()=>{
+    if(confirm("Reset all shopping lists to the original items? This will remove any items you added.")) {
+      state.customShoppingLists=null; state.checkedShop={}; state.shoppingEditMode=false; scheduleSave(); render();
+    }
+  });
+
+  // ── LIVE INPUT HANDLERS (no re-render, direct state mutation) ────────────────
+  // Shopping list edits
+  liveInput("[data-shop-name]", (inp,v)=>{
+    const parts=inp.dataset.shopName.split("-"); const lk=parts[0]; const idx=parseInt(parts[1]);
+    const list=state.customShoppingLists?.find(l=>l.key===lk);
+    if(list?.items?.[idx]) list.items[idx].name=v;
+  });
+  liveInput("[data-shop-qty]", (inp,v)=>{
+    const parts=inp.dataset.shopQty.split("-"); const lk=parts[0]; const idx=parseInt(parts[1]);
+    const list=state.customShoppingLists?.find(l=>l.key===lk);
+    if(list?.items?.[idx]) list.items[idx].qty=v;
+  });
+  liveInput("[data-shop-price]", (inp,v)=>{
+    const parts=inp.dataset.shopPrice.split("-"); const lk=parts[0]; const idx=parseInt(parts[1]);
+    const list=state.customShoppingLists?.find(l=>l.key===lk);
+    if(list?.items?.[idx]) list.items[idx].price=v;
+  });
+
+  // Budget edits
+  liveInput("[data-bedit-item]", (inp,v)=>{
+    const idx=parseInt(inp.dataset.beditItem);
+    if(state.customBudget?.[idx]) {
+      const old=state.customBudget[idx].item;
+      if(state.actualCosts[old]!==undefined){state.actualCosts[v]=state.actualCosts[old];delete state.actualCosts[old];}
+      state.customBudget[idx].item=v;
+    }
+  });
+  liveInput("[data-bedit-amt]", (inp,v)=>{
+    const idx=parseInt(inp.dataset.beditAmt);
+    if(state.customBudget?.[idx]) state.customBudget[idx].budget=parseFloat(v)||0;
+  });
+  liveInput("[data-actual]", (inp,v)=>{
+    state.actualCosts[inp.dataset.actual]=v.replace(/[^0-9.]/g,"");
+  });
+  liveInput("[data-extra-actual]", (inp,v)=>{
+    state.extraActual[parseInt(inp.dataset.extraActual)]=v.replace(/[^0-9.]/g,"");
+  });
+
+  // Packing edits
+  liveInput("[data-pack-name]", (inp,v)=>{
+    const [ci,ii]=inp.dataset.packName.split("-").map(Number);
+    if(state.customPacking?.[ci]?.items?.[ii]) state.customPacking[ci].items[ii].name=v;
+  });
+
+  // Night before edits
+  liveInput("[data-nbc-label]", (inp,v)=>{
+    const idx=parseInt(inp.dataset.nbcLabel);
+    if(state.customNBCosts?.[idx]) state.customNBCosts[idx].l=v;
+  });
+  liveInput("[data-nbc-val]", (inp,v)=>{
+    const idx=parseInt(inp.dataset.nbcVal);
+    if(state.customNBCosts?.[idx]) state.customNBCosts[idx].v=v;
+  });
+  liveInput("[data-nbc-range]", (inp,v)=>{
+    const idx=parseInt(inp.dataset.nbcRange);
+    if(state.customNBCosts?.[idx]) state.customNBCosts[idx].r=v;
+  });
+  liveInput("[data-nb-name]", (inp,v)=>{
+    const parts=inp.dataset.nbName.split("-"); const prefix=parts[0]; const idx=parseInt(parts[1]);
+    if(prefix==="food"&&state.customNBFood?.[idx]) state.customNBFood[idx][0]=v;
+    else if(state.customNBDrinks?.[idx]) state.customNBDrinks[idx][0]=v;
+  });
+  liveInput("[data-nb-price]", (inp,v)=>{
+    const parts=inp.dataset.nbPrice.split("-"); const prefix=parts[0]; const idx=parseInt(parts[1]);
+    if(prefix==="food"&&state.customNBFood?.[idx]) state.customNBFood[idx][1]=v;
+    else if(state.customNBDrinks?.[idx]) state.customNBDrinks[idx][1]=v;
+  });
+
+  // Sweden edits
+  liveInput("[data-sedit-task]", (inp,v)=>{
+    const [ci,ti]=inp.dataset.seditTask.split("-").map(Number);
+    if(state.customSweden?.[ci]?.tasks?.[ti]) state.customSweden[ci].tasks[ti].task=v;
+  });
+  liveInput("[data-sedit-tip]", (inp,v)=>{
+    const [ci,ti]=inp.dataset.seditTip.split("-").map(Number);
+    if(state.customSweden?.[ci]?.tasks?.[ti]) state.customSweden[ci].tasks[ti].tip=v;
+  });
+
+  // Timeline edits
+  liveInput("[data-tedit]", (inp,v)=>{
+    const [pi,ti]=inp.dataset.tedit.split("-").map(Number);
+    if(state.customTimeline?.[pi]?.tasks?.[ti]) state.customTimeline[pi].tasks[ti].task=v;
+  });
+
+  // Schedule edits
+  liveInput("[data-edit-time]", (inp,v)=>{
+    const [di,ei]=inp.dataset.editTime.split("-").map(Number);
+    if(state.customSchedule?.[di]?.events?.[ei]) state.customSchedule[di].events[ei].time=v;
+  });
+  liveInput("[data-edit-event]", (inp,v)=>{
+    const [di,ei]=inp.dataset.editEvent.split("-").map(Number);
+    if(state.customSchedule?.[di]?.events?.[ei]) state.customSchedule[di].events[ei].event=v;
+  });
+
+  // Delete item
+  document.querySelectorAll("[data-shop-del]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const [listKey,i] = btn.dataset.shopDel.split("-"); const idx=parseInt(i);
+      const list = state.customShoppingLists.find(l=>l.key===listKey);
+      if(!list) return;
+      list.items.splice(idx,1);
+      // Rebuild checked state for this list
+      const newChecked={};
+      Object.entries(state.checkedShop).forEach(([k,v])=>{
+        const parts=k.split("-"); const lk=parts[0]; const ki=parseInt(parts[1]);
+        if(lk!==listKey) newChecked[k]=v;
+        else if(ki<idx) newChecked[k]=v;
+        else if(ki>idx) newChecked[`${lk}-${ki-1}`]=v;
+      });
+      state.checkedShop=newChecked;
+      scheduleSave(); render();
+    });
+  });
+
+  // Add new item to any list
+  document.querySelectorAll("[data-shop-add]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const listKey = btn.dataset.shopAdd;
+      const name  = (document.getElementById(`snew-name-${listKey}`)?.value||"").trim();
+      const qty   = (document.getElementById(`snew-qty-${listKey}`)?.value||"").trim();
+      const price = (document.getElementById(`snew-price-${listKey}`)?.value||"").trim();
+      if(!name) return;
+      if(!state.customShoppingLists) state.customShoppingLists=SHOPPING_LISTS.map(l=>({...l,items:l.items.map(i=>({...i}))}));
+      const list = state.customShoppingLists.find(l=>l.key===listKey);
+      if(list) { list.items.push({name,qty,price}); scheduleSave(); render(); }
+    });
+  });
+
+  // Actual cost inputs handled by liveInput above
+
+  // Extra item inputs
+  const addExtraBtn = document.getElementById("add-extra-btn");
+  if(addExtraBtn) {
+    addExtraBtn.addEventListener("click",addExtraItem);
+    document.getElementById("extra-item-name")?.addEventListener("keydown",e=>{ if(e.key==="Enter") addExtraItem(); });
+    document.getElementById("extra-item-budget")?.addEventListener("keydown",e=>{ if(e.key==="Enter") addExtraItem(); });
+  }
+
+  // Extra actual inputs
+  document.querySelectorAll("[data-extra-actual]").forEach(inp=>{
+    inp.addEventListener("input",()=>{
+      state.extraActual[parseInt(inp.dataset.extraActual)]=inp.value.replace(/[^0-9.]/g,"");
+      scheduleSave(); updateSummary();
+    });
+  });
+
+  // Remove extra items
+  document.querySelectorAll("[data-remove-extra]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const i=parseInt(btn.dataset.removeExtra);
+      state.extraItems.splice(i,1);
+      const newEA={};
+      Object.entries(state.extraActual).forEach(([k,v])=>{ const n=parseInt(k); if(n<i) newEA[k]=v; else if(n>i) newEA[n-1]=v; });
+      state.extraActual=newEA;
+      scheduleSave(); render();
+    });
+  });
+
+  // ── SCHEDULE EDIT HANDLERS ──────────────────────────────────────────────────
+
+  // Enter / exit edit mode
+  document.getElementById("sched-edit")?.addEventListener("click",()=>{
+    if (!state.customSchedule) {
+      state.customSchedule = DAY_SCHEDULE.map(d=>({...d, events:d.events.map(e=>({...e}))}));
+    }
+    state.scheduleEditMode = true; render();
+  });
+  document.getElementById("sched-done")?.addEventListener("click",()=>{
+    state.scheduleEditMode = false; scheduleSave(); render();
+  });
+  document.getElementById("sched-reset")?.addEventListener("click",()=>{
+    if(confirm("Reset the schedule back to the original times? This can't be undone.")) {
+      state.customSchedule = null; state.scheduleEditMode = false; scheduleSave(); render();
+    }
+  });
+
+  // Schedule time/event edits handled by liveInput above
+
+  // Delete an event row
+  document.querySelectorAll("[data-del-event]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const [di,ei] = btn.dataset.delEvent.split("-").map(Number);
+      state.customSchedule[di].events.splice(ei,1);
+      scheduleSave(); render();
+    });
+  });
+
+  // Add a new event row
+  document.querySelectorAll("[data-add-event]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const di = parseInt(btn.dataset.addEvent);
+      const timeVal  = (document.getElementById(`new-time-${di}`)?.value||"").trim();
+      const eventVal = (document.getElementById(`new-event-${di}`)?.value||"").trim();
+      if (!eventVal) return;
+      state.customSchedule[di].events.push({time: timeVal||"—", event: eventVal});
+      scheduleSave(); render();
+    });
+  });
+
+  // Drag-to-reorder (desktop + touch)
+  let dragDi=null, dragEi=null, dragEl=null, touchY=0;
+
+  function getDragTarget(el) {
+    return el.closest ? el.closest(".sched-row") : null;
+  }
+
+  // Desktop drag
+  document.querySelectorAll(".sched-row").forEach(row=>{
+    row.addEventListener("dragstart", e=>{
+      dragDi = parseInt(row.dataset.di);
+      dragEi = parseInt(row.dataset.ei);
+      dragEl = row;
+      row.style.opacity="0.4";
+      e.dataTransfer.effectAllowed="move";
+    });
+    row.addEventListener("dragend", ()=>{ row.style.opacity="1"; });
+    row.addEventListener("dragover", e=>{
+      e.preventDefault();
+      e.dataTransfer.dropEffect="move";
+      row.style.borderTop="2px solid #9b2335";
+    });
+    row.addEventListener("dragleave", ()=>{ row.style.borderTop=""; });
+    row.addEventListener("drop", e=>{
+      e.preventDefault();
+      row.style.borderTop="";
+      const targetDi = parseInt(row.dataset.di);
+      const targetEi = parseInt(row.dataset.ei);
+      if (dragDi===null || dragEi===null) return;
+      if (dragDi!==targetDi || dragEi===targetEi) return;
+      const events = state.customSchedule[dragDi].events;
+      const [moved] = events.splice(dragEi,1);
+      const insertAt = targetEi > dragEi ? targetEi : targetEi;
+      events.splice(insertAt,0,moved);
+      dragDi=null; dragEi=null;
+      scheduleSave(); render();
+    });
+  });
+
+  // Touch drag (mobile)
+  document.querySelectorAll(".sched-row").forEach(row=>{
+    row.addEventListener("touchstart", e=>{
+      dragDi = parseInt(row.dataset.di);
+      dragEi = parseInt(row.dataset.ei);
+      dragEl = row;
+      touchY = e.touches[0].clientY;
+      row.style.background="#fff8f0";
+    }, {passive:true});
+    row.addEventListener("touchend", e=>{
+      if (dragEl) dragEl.style.background="";
+      // Find element under touch point
+      const touch = e.changedTouches[0];
+      const el = document.elementFromPoint(touch.clientX, touch.clientY);
+      const target = el ? el.closest(".sched-row") : null;
+      if (target && target !== row) {
+        const targetDi = parseInt(target.dataset.di);
+        const targetEi = parseInt(target.dataset.ei);
+        if (dragDi===targetDi && dragEi!==targetEi) {
+          const events = state.customSchedule[dragDi].events;
+          const [moved] = events.splice(dragEi,1);
+          events.splice(targetEi,0,moved);
+          scheduleSave(); render();
+        }
+      }
+      dragDi=null; dragEi=null; dragEl=null;
+    }, {passive:true});
+  });
+
+  // ── BUDGET EDIT HANDLERS ────────────────────────────────────────────────────
+  document.getElementById("bedit")?.addEventListener("click",()=>{ state.budgetEditMode=true; render(); });
+  document.getElementById("bdone")?.addEventListener("click",()=>{ state.budgetEditMode=false; scheduleSave(); render(); });
+  document.getElementById("breset")?.addEventListener("click",()=>{
+    if(confirm("Reset budget to original items?")) { state.customBudget=null; state.budgetEditMode=false; scheduleSave(); render(); }
+  });
+
+  // Budget inline edits
+  document.querySelectorAll("[data-bedit-item]").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const idx=parseInt(inp.dataset.beditItem);
+      const oldName = state.customBudget[idx].item;
+      state.customBudget[idx].item = inp.value;
+      // migrate actual cost key
+      if(state.actualCosts[oldName]!==undefined){ state.actualCosts[inp.value]=state.actualCosts[oldName]; delete state.actualCosts[oldName]; }
+      scheduleSave();
+    });
+  });
+  document.querySelectorAll("[data-bedit-amt]").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const idx=parseInt(inp.dataset.beditAmt);
+      state.customBudget[idx].budget=parseFloat(inp.value.replace(/[^0-9.]/g,""))||0;
+      scheduleSave(); render();
+    });
+  });
+  document.querySelectorAll("[data-cycleb]").forEach(el=>{
+    el.addEventListener("click",()=>{
+      const idx=parseInt(el.dataset.cycleb);
+      const cycle=["ok","warning","note"];
+      const cur=state.customBudget[idx].status||"ok";
+      state.customBudget[idx].status=cycle[(cycle.indexOf(cur)+1)%3];
+      scheduleSave(); render();
+    });
+  });
+  document.querySelectorAll("[data-bdel]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const idx=parseInt(btn.dataset.bdel);
+      state.customBudget.splice(idx,1);
+      scheduleSave(); render();
+    });
+  });
+
+  // Budget drag reorder
+  let bDragIdx=null;
+  document.querySelectorAll("[data-bidx]").forEach(row=>{
+    row.addEventListener("dragstart",e=>{ bDragIdx=parseInt(row.dataset.bidx); row.style.opacity=".4"; e.dataTransfer.effectAllowed="move"; });
+    row.addEventListener("dragend",()=>{ row.style.opacity="1"; });
+    row.addEventListener("dragover",e=>{ e.preventDefault(); row.style.borderTop="2px solid #9b2335"; });
+    row.addEventListener("dragleave",()=>{ row.style.borderTop=""; });
+    row.addEventListener("drop",e=>{
+      e.preventDefault(); row.style.borderTop="";
+      const targetIdx=parseInt(row.dataset.bidx);
+      if(bDragIdx===null||bDragIdx===targetIdx) return;
+      const [moved]=state.customBudget.splice(bDragIdx,1);
+      state.customBudget.splice(targetIdx,0,moved);
+      bDragIdx=null; scheduleSave(); render();
+    });
+  });
+
+  // Budget add new item
+  document.getElementById("bnew-add")?.addEventListener("click",()=>{
+    const name=(document.getElementById("bnew-name")?.value||"").trim();
+    const amt=parseFloat((document.getElementById("bnew-amt")?.value||"").replace(/[^0-9.]/g,""))||0;
+    if(!name) return;
+    if(!state.customBudget) state.customBudget=BUDGET_LINES.map(r=>({...r}));
+    state.customBudget.push({item:name,budget:amt,low:0,high:0,notes:"Custom item",status:"ok"});
+    scheduleSave(); render();
+  });
+
+  // ── SWEDEN EDIT HANDLERS ────────────────────────────────────────────────────
+  document.getElementById("swedit")?.addEventListener("click",()=>{ state.swedenEditMode=true; render(); });
+  document.getElementById("swdone")?.addEventListener("click",()=>{ state.swedenEditMode=false; scheduleSave(); render(); });
+  document.getElementById("swreset")?.addEventListener("click",()=>{
+    if(confirm("Reset Sweden tasks to original?")) { state.customSweden=null; state.swedenEditMode=false; scheduleSave(); render(); }
+  });
+  document.querySelectorAll("[data-sedit-task]").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const [ci,ti]=inp.dataset.seditTask.split("-").map(Number);
+      state.customSweden[ci].tasks[ti].task=inp.value; scheduleSave();
+    });
+  });
+  document.querySelectorAll("[data-sedit-tip]").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const [ci,ti]=inp.dataset.seditTip.split("-").map(Number);
+      state.customSweden[ci].tasks[ti].tip=inp.value; scheduleSave();
+    });
+  });
+  document.querySelectorAll("[data-sdel]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const [ci,ti]=btn.dataset.sdel.split("-").map(Number);
+      state.customSweden[ci].tasks.splice(ti,1); scheduleSave(); render();
+    });
+  });
+  document.querySelectorAll("[data-sadd]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const ci=parseInt(btn.dataset.sadd);
+      const val=(document.getElementById(`snew-task-${ci}`)?.value||"").trim();
+      if(!val) return;
+      state.customSweden[ci].tasks.push({task:val,tip:""});
+      scheduleSave(); render();
+    });
+  });
+
+  // ── TIMELINE EDIT HANDLERS ───────────────────────────────────────────────────
+  document.getElementById("tedit")?.addEventListener("click",()=>{ state.timelineEditMode=true; render(); });
+  document.getElementById("tdone")?.addEventListener("click",()=>{ state.timelineEditMode=false; scheduleSave(); render(); });
+  document.getElementById("treset")?.addEventListener("click",()=>{
+    if(confirm("Reset to-do list to original tasks?")) { state.customTimeline=null; state.timelineEditMode=false; scheduleSave(); render(); }
+  });
+  document.querySelectorAll("[data-tedit]").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const [pi,ti]=inp.dataset.tedit.split("-").map(Number);
+      state.customTimeline[pi].tasks[ti].task=inp.value; scheduleSave();
+    });
+  });
+  document.querySelectorAll("[data-tpriority]").forEach(sel=>{
+    sel.addEventListener("change",()=>{
+      const [pi,ti]=sel.dataset.tpriority.split("-").map(Number);
+      state.customTimeline[pi].tasks[ti].priority=sel.value; scheduleSave();
+    });
+  });
+  document.querySelectorAll("[data-tdel]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const [pi,ti]=btn.dataset.tdel.split("-").map(Number);
+      state.customTimeline[pi].tasks.splice(ti,1); scheduleSave(); render();
+    });
+  });
+  document.querySelectorAll("[data-tadd]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const pi=parseInt(btn.dataset.tadd);
+      const val=(document.getElementById(`tnew-task-${pi}`)?.value||"").trim();
+      if(!val) return;
+      state.customTimeline[pi].tasks.push({task:val,priority:"medium"});
+      scheduleSave(); render();
+    });
+  });
+
+  // ── PACKING HANDLERS ────────────────────────────────────────────────────────
+  document.getElementById("pack-edit")?.addEventListener("click",()=>{ state.packingEditMode=true; render(); });
+  document.getElementById("pack-done")?.addEventListener("click",()=>{ state.packingEditMode=false; scheduleSave(); render(); });
+  document.getElementById("pack-reset")?.addEventListener("click",()=>{
+    if(confirm("Reset packing list to defaults? Your custom items will be removed.")) {
+      state.customPacking=null; state.packingEditMode=false; scheduleSave(); render();
+    }
+  });
+
+  // Check/uncheck packing items
+  document.querySelectorAll("[data-pack-check]").forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      const [ci,ii] = cb.dataset.packCheck.split("-").map(Number);
+      if (!state.customPacking) state.customPacking = DEFAULT_PACKING.map(cat=>({...cat,items:cat.items.map(i=>({...i}))}));
+      state.customPacking[ci].items[ii].checked = cb.checked;
+      scheduleSave(); render();
+    });
+  });
+
+  // Edit item name — handled by liveInput above
+
+
+  // Delete item
+  document.querySelectorAll("[data-pack-del]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const [ci,ii] = btn.dataset.packDel.split("-").map(Number);
+      state.customPacking[ci].items.splice(ii,1);
+      scheduleSave(); render();
+    });
+  });
+
+  // Add new item to category
+  document.querySelectorAll("[data-pack-add]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const ci = parseInt(btn.dataset.packAdd);
+      const val = (document.getElementById(`pack-new-${ci}`)?.value||"").trim();
+      if(!val) return;
+      if(!state.customPacking) state.customPacking = DEFAULT_PACKING.map(cat=>({...cat,items:cat.items.map(i=>({...i}))}));
+      state.customPacking[ci].items.push({name:val, checked:false});
+      scheduleSave(); render();
+    });
+  });
+
+  // Also allow Enter key on add inputs
+  state.customPacking?.forEach((_,ci)=>{
+    const inp = document.getElementById(`pack-new-${ci}`);
+    inp?.addEventListener("keydown", e=>{
+      if(e.key==="Enter") document.querySelector(`[data-pack-add="${ci}"]`)?.click();
+    });
+  });
+
+  // ── NIGHT BEFORE EDIT HANDLERS ──────────────────────────────────────────────
+  document.getElementById("nb-done")?.addEventListener("click",()=>{ state.nbEditMode=false; scheduleSave(); render(); });
+  document.getElementById("nb-reset")?.addEventListener("click",()=>{
+    if(confirm("Reset Night Before to original?")) { state.customNBCosts=null; state.customNBFood=null; state.customNBDrinks=null; state.nbEditMode=false; scheduleSave(); render(); }
+  });
+
+  // Cost card edits
+  document.querySelectorAll("[data-nbc-label]").forEach(inp=>{
+    inp.addEventListener("change",()=>{ state.customNBCosts[parseInt(inp.dataset.nbcLabel)].l=inp.value; scheduleSave(); });
+  });
+  document.querySelectorAll("[data-nbc-val]").forEach(inp=>{
+    inp.addEventListener("change",()=>{ state.customNBCosts[parseInt(inp.dataset.nbcVal)].v=inp.value; scheduleSave(); render(); });
+  });
+  document.querySelectorAll("[data-nbc-range]").forEach(inp=>{
+    inp.addEventListener("change",()=>{ state.customNBCosts[parseInt(inp.dataset.nbcRange)].r=inp.value; scheduleSave(); });
+  });
+  document.querySelectorAll("[data-nbc-del]").forEach(btn=>{
+    btn.addEventListener("click",()=>{ state.customNBCosts.splice(parseInt(btn.dataset.nbcDel),1); scheduleSave(); render(); });
+  });
+  document.getElementById("nbc-add")?.addEventListener("click",()=>{
+    const l=(document.getElementById("nbc-new-label")?.value||"").trim();
+    const v=(document.getElementById("nbc-new-val")?.value||"").trim()||"$0";
+    if(!l) return;
+    state.customNBCosts.push({l,v,r:"",w:false});
+    scheduleSave(); render();
+  });
+
+  // Food/drinks list edits
+  document.querySelectorAll("[data-nb-name]").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const [prefix,i]=inp.dataset.nbName.split("-"); const idx=parseInt(i);
+      if(prefix==="food") state.customNBFood[idx][0]=inp.value;
+      else state.customNBDrinks[idx][0]=inp.value;
+      scheduleSave();
+    });
+  });
+  document.querySelectorAll("[data-nb-price]").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const [prefix,i]=inp.dataset.nbPrice.split("-"); const idx=parseInt(i);
+      if(prefix==="food") state.customNBFood[idx][1]=inp.value;
+      else state.customNBDrinks[idx][1]=inp.value;
+      scheduleSave();
+    });
+  });
+  document.querySelectorAll("[data-nb-del]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const [prefix,i]=btn.dataset.nbDel.split("-"); const idx=parseInt(i);
+      if(prefix==="food") state.customNBFood.splice(idx,1);
+      else state.customNBDrinks.splice(idx,1);
+      scheduleSave(); render();
+    });
+  });
+  document.querySelectorAll("[data-nb-add]").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const prefix=btn.dataset.nbAdd;
+      const name=(document.getElementById(`nb-new-name-${prefix}`)?.value||"").trim();
+      const price=(document.getElementById(`nb-new-price-${prefix}`)?.value||"").trim()||"";
+      if(!name) return;
+      if(prefix==="food") state.customNBFood.push([name,price]);
+      else state.customNBDrinks.push([name,price]);
+      scheduleSave(); render();
+    });
+  });
+}
+
+
+function addExtraItem() {
+  const name   = (document.getElementById("extra-item-name")?.value||"").trim();
+  const budget = parseFloat((document.getElementById("extra-item-budget")?.value||"").replace(/[^0-9.]/g,""))||0;
+  const status = document.getElementById("extra-item-status")?.value||"ok";
   if(!name) return;
-  S.extra.push({item:name,budget,actual:''});
-  save(); render();
+  state.extraItems.push({item:name,budget,low:0,high:0,notes:"Custom item",status});
+  state.newExtra={item:"",budget:"",status:"ok"};
+  scheduleSave(); render();
 }
 
-function renderSchedule(){
-  let html = '<h2>Wedding Day Schedule</h2><p style="margin-bottom:16px">Full timeline across all 3 days</p>';
-  SCHEDULE.forEach(day=>{
-    html += `<div class="card" style="border-top:4px solid ${day.color}"><div style="background:${day.color};margin:-16px -16px 12px;padding:12px 16px;color:white;font-size:15px;font-family:Georgia,serif">${day.day}</div>`;
-    day.events.forEach(([time,event])=>{
-      html += `<div style="display:grid;grid-template-columns:85px 1fr;gap:8px;padding:7px 0;border-bottom:1px solid #f5ede0;font-size:13px"><span style="font-weight:700;color:${day.color}">${time}</span><span>${event}</span></div>`;
-    });
-    html += '</div>';
-  });
-  document.getElementById('content').innerHTML = html;
+function updateStats() {
+  // Light update of just the header stats without full re-render
+  const taskDone = Object.values(state.checkedTasks).filter(Boolean).length;
+  const taskTotal = TIMELINE.reduce((s,p)=>s+p.tasks.length,0);
+  // We'll just re-render the whole thing — it's fast enough
 }
 
-function renderShopping(){
-  let html = '<h2>Shopping Lists</h2><p style="margin-bottom:16px">Check off as you shop. Add your own items.</p>';
-  Object.entries(SHOPPING).forEach(([listName, items])=>{
-    const key = listName.replace(/[^a-z]/gi,'_');
-    S.shop[key] = S.shop[key]||{};
-    S.shopCustom[key] = S.shopCustom[key]||[];
-    const allItems = [...items, ...S.shopCustom[key]];
-    const done = allItems.filter((_,i)=>S.shop[key][i]).length;
-    html += `<div class="card"><div style="background:#3d2e1e;margin:-16px -16px 12px;padding:12px 16px;color:#faf7f2;font-size:14px;font-family:Georgia,serif;display:flex;justify-content:space-between"><span>${listName}</span><span style="color:${done===allItems.length?'#7aaa7a':'#d4b896'};font-size:12px">${done}/${allItems.length}</span></div>`;
-    allItems.forEach((item,i)=>{
-      const checked = !!S.shop[key][i];
-      const isCustom = i >= items.length;
-      html += `<div class="item"><input type="checkbox" ${checked?'checked':''} onchange="S.shop['${key}'][${i}]=this.checked;save();render()"/><span class="${checked?'done':''}" style="flex:1">${item}</span>${isCustom?`<button onclick="S.shopCustom['${key}'].splice(${i-items.length},1);delete S.shop['${key}'];save();render()" style="background:none;border:none;color:#e07070;cursor:pointer">×</button>`:''}</div>`;
-    });
-    html += `<div class="add"><input id="si_${key}" placeholder="Add item..."/><button onclick="addShop('${key}','si_${key}')">Add</button></div></div>`;
-  });
-  document.getElementById('content').innerHTML = html;
+function updateSummary() {
+  // For actual cost inputs, just trigger a light re-render of the summary area
+  // Full render is fine for now
 }
 
-function addShop(key, inputId){
-  const val = document.getElementById(inputId).value.trim();
-  if(!val) return;
-  S.shopCustom[key].push(val);
-  save(); render();
+// ─── BOOT ─────────────────────────────────────────────────────────────────────
+// Load from localStorage instantly — no cloud sync needed
+try {
+  const saved = localStorage.getItem(SYNC_KEY);
+  if (saved) {
+    const d = JSON.parse(saved);
+    state.checkedTasks        = d.checkedTasks        || {};
+    state.checkedSweden       = d.checkedSweden       || {};
+    state.checkedShop         = d.checkedShop         || {};
+    state.shopCustom          = d.shopCustom          || { fri_food:[], fri_drinks:[], breakfast:[], wed_drinks:[], fire:[] };
+    state.actualCosts         = d.actualCosts         || {};
+    state.extraItems          = d.extraItems          || [];
+    state.extraActual         = d.extraActual         || {};
+    state.customSchedule      = d.customSchedule      || null;
+    state.customBudget        = d.customBudget        || null;
+    state.customTimeline      = d.customTimeline      || null;
+    state.customSweden        = d.customSweden        || null;
+    state.customShoppingLists = d.customShoppingLists || null;
+    state.customNBCosts       = d.customNBCosts       || null;
+    state.customNBFood        = d.customNBFood        || null;
+    state.customNBDrinks      = d.customNBDrinks      || null;
+    state.customPacking       = d.customPacking       || null;
+    state.lastSaved           = d.savedAt             || null;
+  }
+} catch(e) {}
+state.syncStatus = "synced";
+
+// Render with error display so it never hangs silently
+try {
+  render();
+} catch(e) {
+  document.getElementById("app").innerHTML = `
+    <div style="text-align:center;padding:40px 20px;font-family:sans-serif;color:#6a1010">
+      <div style="font-size:40px;margin-bottom:16px">💍</div>
+      <div style="font-family:Georgia,serif;font-size:22px;margin-bottom:12px">Liz & Ryan Wedding 2027</div>
+      <div style="font-size:13px;color:#9b2335;margin-bottom:8px">App error — please go back to Claude and ask for a fresh copy</div>
+      <div style="font-size:11px;color:#aaa">${e.message}</div>
+    </div>`;
 }
 
-function renderSweden(){
-  let html = '<h2>Sweden Summer Visit</h2><p style="margin-bottom:16px">Your scouting mission - leave with every vendor confirmed.</p>';
-  const totalDone = SWEDEN.reduce((s,c,ci)=>s+c.items.filter((_,ti)=>S.tasks['sw_'+ci+'_'+ti]).length,0);
-  const total = SWEDEN.reduce((s,c)=>s+c.items.length,0);
-  html += `<div style="font-size:13px;color:#5a7ea8;font-weight:700;margin-bottom:12px">${totalDone} of ${total} tasks complete</div>`;
-  html += `<div style="height:4px;background:#e8d8c4;border-radius:2px;margin-bottom:16px;overflow:hidden"><div style="height:100%;width:${total>0?Math.round(totalDone/total*100):0}%;background:#5a7ea8;border-radius:2px"></div></div>`;
-  SWEDEN.forEach((cat,ci)=>{
-    html += `<div class="card"><div style="font-weight:700;font-size:14px;margin-bottom:10px;color:#3d2e1e">${cat.cat}</div>`;
-    cat.items.forEach((item,ti)=>{
-      const k = 'sw_'+ci+'_'+ti;
-      const checked = !!S.tasks[k];
-      html += `<div class="item"><input type="checkbox" ${checked?'checked':''} onchange="S.tasks['${k}']=this.checked;save();render()"/><span class="${checked?'done':''}">${item}</span></div>`;
-    });
-    html += '</div>';
-  });
-  document.getElementById('content').innerHTML = html;
-}
+// Save to localStorage on every change
+saveToCloud = async function() {
+  try {
+    const payload = {
+      checkedTasks:        state.checkedTasks,
+      checkedSweden:       state.checkedSweden,
+      checkedShop:         state.checkedShop,
+      shopCustom:          state.shopCustom,
+      actualCosts:         state.actualCosts,
+      extraItems:          state.extraItems,
+      extraActual:         state.extraActual,
+      customSchedule:      state.customSchedule      || null,
+      customBudget:        state.customBudget        || null,
+      customTimeline:      state.customTimeline      || null,
+      customSweden:        state.customSweden        || null,
+      customShoppingLists: state.customShoppingLists || null,
+      customNBCosts:       state.customNBCosts       || null,
+      customNBFood:        state.customNBFood        || null,
+      customNBDrinks:      state.customNBDrinks      || null,
+      customPacking:       state.customPacking       || null,
+      savedAt:             new Date().toISOString(),
+    };
+    localStorage.setItem(SYNC_KEY, JSON.stringify(payload));
+    state.syncStatus = "synced";
+    state.lastSaved  = payload.savedAt;
+  } catch(e) { state.syncStatus = "error"; }
+  renderSyncBadge();
+};
 
-function renderTodo(){
-  const total = TIMELINE.reduce((s,p)=>s+p.tasks.length,0);
-  const done = Object.values(S.tasks).filter((v,k)=>!String(k).startsWith('sw_')&&v).length;
-  let html = '<h2>Master To-Do List</h2>';
-  html += `<div style="font-size:13px;color:#b5855a;font-weight:700;margin-bottom:8px">${done} of ${total} tasks complete</div>`;
-  html += `<div style="height:4px;background:#e8d8c4;border-radius:2px;margin-bottom:16px;overflow:hidden"><div style="height:100%;width:${total>0?Math.round(done/total*100):0}%;background:#b5855a;border-radius:2px"></div></div>`;
-  TIMELINE.forEach((phase,pi)=>{
-    const pDone = phase.tasks.filter((_,ti)=>S.tasks['t_'+pi+'_'+ti]).length;
-    html += `<div style="margin-bottom:18px;border-left:3px solid #b5855a;padding-left:14px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><strong style="font-size:14px">${phase.phase}</strong><span style="font-size:11px;color:${pDone===phase.tasks.length?'#6b8a70':'#b5855a'};font-weight:700">${pDone}/${phase.tasks.length}</span></div><div class="card">`;
-    phase.tasks.forEach((task,ti)=>{
-      const k = 't_'+pi+'_'+ti;
-      const checked = !!S.tasks[k];
-      html += `<div class="item"><input type="checkbox" ${checked?'checked':''} onchange="S.tasks['${k}']=this.checked;save();render()"/><span class="${checked?'done':''}" style="flex:1">${task}</span></div>`;
-    });
-    html += '</div></div>';
-  });
-  document.getElementById('content').innerHTML = html;
-}
-
-render();
+// ─── DOWNLOAD BUTTON ──────────────────────────────────────────────────────────
+(function() {
+  const btn = document.createElement("button");
+  btn.innerHTML = "⬇️ Download for Netlify";
+  btn.style.cssText = `
+    position:fixed;bottom:24px;right:20px;z-index:9999;
+    background:#6a1010;color:#f5f0e8;border:none;border-radius:30px;
+    padding:12px 20px;font-family:'Lato',sans-serif;font-size:13px;font-weight:700;
+    cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.25);letter-spacing:.03em;
+    transition:background .18s,transform .12s;white-space:nowrap;
+  `;
+  btn.onmouseenter = ()=>btn.style.background="#9b2335";
+  btn.onmouseleave = ()=>btn.style.background="#6a1010";
+  btn.ontouchstart = ()=>btn.style.background="#9b2335";
+  btn.onclick = function() {
+    btn.innerHTML = "⏳ Preparing...";
+    setTimeout(()=>{
+      try {
+        const html = document.documentElement.outerHTML;
+        const blob = new Blob([html], {type:"text/html"});
+        const url  = URL.createObjectURL(blob);
+        const a    = document.createElement("a");
+        a.href     = url;
+        a.download = "liz-ryan-wedding.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        btn.innerHTML = "✓ Downloaded!";
+        setTimeout(()=>{ btn.innerHTML="⬇️ Download for Netlify"; },2500);
+      } catch(e) {
+        btn.innerHTML = "⬇️ Download for Netlify";
+        alert("To save: right-click this page → Save As → liz-ryan-wedding.html");
+      }
+    }, 100);
+  };
+  document.body.appendChild(btn);
+})();
 </script>
-
 </body>
 </html>
